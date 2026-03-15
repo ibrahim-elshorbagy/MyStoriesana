@@ -1,0 +1,333 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* old one not use */
+  .no-tailwindcss-base {
+    /* Reset all core typography elements */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-size: revert;
+      font-weight: revert;
+      margin: revert;
+    }
+
+    p {
+      margin: revert;
+      line-height: revert;
+    }
+
+    ol,
+    ul {
+      list-style: revert;
+      margin: revert;
+      padding: revert;
+      padding-left: 1.5em;
+    }
+
+    li {
+      margin: revert;
+    }
+
+    a {
+      color: revert;
+      text-decoration: revert;
+    }
+
+    blockquote {
+      margin: revert;
+      padding: revert;
+      border-left: revert;
+      quotes: revert;
+    }
+
+    pre {
+      font-family: revert;
+      margin: revert;
+      overflow: revert;
+      white-space: revert;
+      background: revert;
+      padding: revert;
+      border-radius: revert;
+    }
+
+    code {
+      font-family: revert;
+      padding: revert;
+      background: revert;
+      border-radius: revert;
+    }
+
+    img {
+      max-width: revert;
+      height: revert;
+      vertical-align: revert;
+    }
+
+    hr {
+      border: revert;
+      margin: revert;
+    }
+
+    /* Form elements reset */
+    button,
+    input,
+    optgroup,
+    select,
+    textarea {
+      font: revert;
+      color: revert;
+      margin: revert;
+      padding: revert;
+      background: revert;
+      border: revert;
+    }
+
+    /* Table elements reset */
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+      width: revert;
+      margin: revert;
+      border: 1px solid #e0e0e0;
+    }
+
+    th,
+    td {
+      padding: revert;
+      border: 1px solid #e0e0e0;
+      background: revert;
+    }
+    /* Additional text elements */
+    strong {
+      font-weight: revert;
+    }
+
+    em {
+      font-style: revert;
+    }
+
+    /* Remove Tailwind's focus ring reset */
+    *:focus {
+      outline: revert;
+    }
+  }
+
+  .no-tailwindcss-support-display {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    line-height: 1.6;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-size: revert;
+      font-weight: revert;
+      margin: revert;
+    }
+
+    p {
+      margin: revert;
+      line-height: revert;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      margin: 1rem 0;
+      border-radius: 4px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12); */
+      display: block;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    th,
+    td {
+      min-width: 100px;
+      padding: 8px 12px;
+      border: 1px solid #ddd;
+      text-align: left;
+      white-space: normal;
+      word-wrap: break-word;
+    }
+
+    th {
+      background-color: #f8f9fa;
+      font-weight: 600;
+    }
+
+    /* tr:nth-child(even) {
+          background-color: #f9f9f9;
+      } */
+
+    ul,
+    ol {
+      list-style: revert;
+      margin: 1rem 0;
+      padding-left: 2rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    blockquote {
+      margin: 1.5rem 0;
+      padding: 1rem 1.5rem;
+      background-color: #f8f9fa;
+      color: #666;
+      font-style: italic;
+    }
+
+    a {
+      color: #3f51b5;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    pre {
+      background-color: #f8f9fa;
+      padding: 1rem;
+      border-radius: 4px;
+      overflow-x: auto;
+      margin: 1.5rem 0;
+    }
+
+    code {
+      font-family: "Courier New", Courier, monospace;
+      font-size: 0.9rem;
+    }
+
+    /* Dark mode overrides */
+    .dark & {
+      color: rgb(229 229 229); /* neutral-200 */
+      /* background-color: rgb(38 38 38);   */
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        color: rgb(229 229 229); /* neutral-200 */
+      }
+
+      table {
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+        border-color: rgb(82 82 82); /* neutral-600 */
+      }
+
+      th,
+      td {
+        border-color: rgb(82 82 82); /* neutral-600 */
+        background-color: rgb(38 38 38); /* neutral-800 */
+      }
+
+      th {
+        background-color: rgb(64 64 64); /* neutral-700 */
+      }
+
+      /* tr:hover,
+          tr:nth-child(even):hover,
+          tr:nth-child(odd):hover {
+              background-color: rgb(64 64 64) !important;
+          } */
+
+      blockquote {
+        background-color: rgb(64 64 64); /* neutral-700 */
+        color: rgb(229 229 229); /* neutral-200 */
+      }
+
+      pre,
+      code {
+        background-color: rgb(64 64 64); /* neutral-700 */
+        color: rgb(229 229 229); /* neutral-200 */
+      }
+
+      a {
+        color: rgb(229 229 229); /* neutral-200 */
+        &:hover {
+          color: rgb(245 245 245); /* neutral-100 */
+        }
+      }
+    }
+  }
+}
+
+/* Smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
+}
+.tox-promotion ,.tox-statusbar__branding{
+  display: none !important;
+}
+
+/* Additional smooth scrolling behavior for better performance */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@keyframes wave-1 {
+  0%,
+  100% {
+    d: path(
+      "M0 500 C 220 420 360 580 720 520 C 1020 470 1120 560 1440 500 L1440 800 L0 800 Z"
+    );
+  }
+  50% {
+    d: path(
+      "M0 520 C 180 400 400 600 720 540 C 1040 450 1080 580 1440 520 L1440 800 L0 800 Z"
+    );
+  }
+}
+
+@keyframes wave-2 {
+  0%,
+  100% {
+    d: path(
+      "M0 520 C 240 460 420 600 720 540 C 980 480 1180 610 1440 540 L1440 800 L0 800 Z"
+    );
+  }
+  50% {
+    d: path(
+      "M0 540 C 200 440 460 620 720 560 C 1000 460 1160 630 1440 560 L1440 800 L0 800 Z"
+    );
+  }
+}
+
+.wave--1 path {
+  animation: wave-1 8s ease-in-out infinite;
+}
+.wave--2 path {
+  animation: wave-2 10s ease-in-out infinite reverse;
+}
+.wave--3 path {
+  animation: wave-1 12s ease-in-out infinite;
+}
+.wave--shine path {
+  animation: wave-2 6s ease-in-out infinite reverse;
+}
+
+.shadow-child {
+  text-shadow: 0 5px 30px oklch(0.65 0.22 41.1);
+}
