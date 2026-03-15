@@ -4,7 +4,7 @@
 @endphp
 
 <div style="font-family: Arial, sans-serif; background-color:#f9f9f9; padding:10px; text-align:center;">
-  <img src="{{ asset('assets/auth/logo.png') }}" alt="MyStoriesAi Logo" width="150"
+  <img src="{{ asset('assets/auth/logo.webp') }}" alt="MyStoryana Logo" width="150"
     style="margin:0 auto 20px auto; width:100%; max-width:400px;" />
 
   <div
@@ -64,9 +64,9 @@
   </div>
 
   <p style="margin-top:20px; font-size:12px; color:#aaa;">
-    © {{ date('Y') }} MyStoriesAi. {{ __('emails.all_rights_reserved', [], $locale) }}
+    © {{ date('Y') }} MyStoryana. {{ __('emails.all_rights_reserved', [], $locale) }}
     <br />
     <a href="{{ config('app.url') }}" style="color:#555; text-decoration:none;">{{ __('emails.official_website', [], $locale) }}</a> |
-    <a href="mailto:support@mystoriesai.com" style="color:#555; text-decoration:none;">{{ __('emails.contact_us', [], $locale) }}</a>
+    <a href="mailto:support@mystoryana.com" style="color:#555; text-decoration:none;">{{ __('emails.contact_us', [], $locale) }}</a>
   </p>
 </div>

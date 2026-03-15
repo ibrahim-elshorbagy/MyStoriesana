@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'MyStoriesAi'),
+    'name' => env('APP_NAME', 'MyStoryana'),
 
     /*
     |--------------------------------------------------------------------------

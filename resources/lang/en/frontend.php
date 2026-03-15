@@ -376,8 +376,8 @@ return [
   'view_all_orders' => 'View All Orders',
 
   /* Footer */
-  'MyStoriesAi_description' => 'We turn your ideas into personalized children’s storybooks — quickly, beautifully, and with a human touch.',
-  'footer_logo_alt' => 'MyStoriesAi Logo',
+  'MyStoryana_description' => 'We turn your ideas into personalized children’s storybooks — quickly, beautifully, and with a human touch.',
+  'footer_logo_alt' => 'MyStoryana Logo',
   'footer_tagline_line1' => 'Turning your ideas into',
   'footer_tagline_line2' => 'personalized storybooks kids love.',
   'footer_sections_title' => 'Sections',
@@ -388,7 +388,7 @@ return [
   'footer_contact_email_title' => 'Email Support',
   'footer_contact_phone_title' => 'Phone Support',
   'footer_rights_reserved' => 'All rights reserved',
-  'footer_copyright_text' => 'MyStoriesAi :year',
+  'footer_copyright_text' => 'MyStoryana :year',
 
   /* Error Pages */
   'error' => 'Error',
@@ -652,7 +652,7 @@ return [
   'child_story' => ':name\'s story',
 
   // SEO Meta Tags
-  'seo_site_name' => 'MyStoriesAi',
+  'seo_site_name' => 'MyStoryana',
   'seo_home_title' => ' Children\'s Storybooks',
   'seo_home_description' => 'Create personalized children\'s storybooks with AI. Your child becomes the hero — with their name, photo, and values. Start creating today!',
   'seo_home_keywords' => 'personalized children\'s storybooks, custom kids books, AI storybook, children\'s stories, personalized stories, kids book gifts',

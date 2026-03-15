@@ -122,7 +122,7 @@ export default function PricingSection({ settings = {} }) {
 
         <div className="mt-8 lg:mt-0 w-full lg:w-auto flex justify-center lg:justify-end">
           <img
-            src="assets/auth/logo.png"
+            src="assets/auth/logo.webp"
             alt="Storybook Preview"
             className="w-40 sm:w-48 lg:w-64 xl:w-[400px] drop-shadow-2xl rounded-xl max-w-full h-auto"
           />

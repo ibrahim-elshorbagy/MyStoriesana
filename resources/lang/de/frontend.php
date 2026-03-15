@@ -375,8 +375,8 @@ return [
   'view_all_orders' => 'Alle Bestellungen anzeigen',
 
   /* Footer */
-  'MyStoriesAi_description' => 'Wir verwandeln Ihre Ideen in unvergessliche, personalisierte Kinder-Geschichten — schnell, liebevoll und im schönsten Stil.',
-  'footer_logo_alt' => 'MyStoriesAi Logo',
+  'MyStoryana_description' => 'Wir verwandeln Ihre Ideen in unvergessliche, personalisierte Kinder-Geschichten — schnell, liebevoll und im schönsten Stil.',
+  'footer_logo_alt' => 'MyStoryana Logo',
   'footer_tagline_line1' => 'Wir verwandeln Ihre Ideen in',
   'footer_tagline_line2' => 'unvergessliche Kinder-Geschichten.',
   'footer_sections_title' => 'Bereiche',
@@ -387,7 +387,7 @@ return [
   'footer_contact_email_title' => 'E-Mail-Support',
   'footer_contact_phone_title' => 'Telefon-Support',
   'footer_rights_reserved' => 'Alle Rechte vorbehalten',
-  'footer_copyright_text' => 'MyStoriesAi :year',
+  'footer_copyright_text' => 'MyStoryana :year',
 
   /* Error Pages */
   'error' => 'Fehler',
@@ -657,7 +657,7 @@ return [
   'child_story' => ':name\'s Geschichte',
 
   // SEO Meta Tags
-  'seo_site_name' => 'MyStoriesAi',
+  'seo_site_name' => 'MyStoryana',
   'seo_home_title' => 'Kinderbücher',
   'seo_home_description' => 'Erstellen Sie personalisierte Kinderbücher mit KI. Ihr Kind wird zum Helden — mit seinem Namen, Foto und Werten. Jetzt starten!',
   'seo_home_keywords' => 'personalisierte Kinderbücher, individuelle Kinderbücher, KI-Bilderbuch, Kindergeschichten, Kinderbuch Geschenk',

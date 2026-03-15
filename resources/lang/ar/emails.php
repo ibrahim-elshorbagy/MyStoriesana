@@ -7,15 +7,15 @@ return [
     'password_reset_intro' => 'تلقيت هذا البريد الإلكتروني لأننا تلقينا طلب إعادة تعيين كلمة المرور لحسابك.',
     'password_reset_button' => 'إعادة تعيين كلمة المرور',
     'password_reset_outro' => 'إذا لم تطلب إعادة تعيين كلمة المرور، فلا حاجة لاتخاذ أي إجراء آخر.',
-    'password_reset_regards' => 'أطيب التحيات، فريق MyStoriesAi',
+    'password_reset_regards' => 'أطيب التحيات، فريق MyStoryana',
 
     // Email Verification
     'email_verification_subject' => 'التحقق من عنوان البريد الإلكتروني',
     'email_verification_greeting' => 'مرحباً :name!',
-    'email_verification_intro' => 'شكراً لانضمامك إلى MyStoriesAi! يرجى النقر على الزر أدناه للتحقق من عنوان بريدك الإلكتروني.',
+    'email_verification_intro' => 'شكراً لانضمامك إلى MyStoryana! يرجى النقر على الزر أدناه للتحقق من عنوان بريدك الإلكتروني.',
     'email_verification_button' => 'التحقق من البريد الإلكتروني',
     'email_verification_outro' => 'إذا لم تقم بإنشاء هذا الحساب، يمكنك تجاهل هذا البريد الإلكتروني بأمان.',
-    'email_verification_regards' => 'أطيب التحيات، فريق MyStoriesAi',
+    'email_verification_regards' => 'أطيب التحيات، فريق MyStoryana',
 
     // Order Emails
     'new_order_admin_subject' => 'طلب جديد تم إنشاؤه - #:id',
@@ -66,7 +66,7 @@ return [
     'notify_admin_story_format_label' => 'الخطة',
     'notify_admin_story_price_label' => 'السعر',
     'notify_admin_view_order_button' => 'عرض تفاصيل الطلب',
-    'notify_admin_regards' => 'تحياتنا، فريق MyStoriesAi',
+    'notify_admin_regards' => 'تحياتنا، فريق MyStoryana',
 
     // User Order Confirmation Email
     'order_confirmation_title' => 'شكراً لك :name',
@@ -89,7 +89,7 @@ return [
     'order_confirmation_next_step_3' => '3) تصلك تحديثات عبر البريد.',
     'order_confirmation_view_order_button' => 'عرض طلبي',
     'order_confirmation_help_text' => 'إذا لديك أي استفسار تواصل معنا في أي وقت.',
-    'order_confirmation_regards' => 'شكراً لاختيارك MyStoriesAi.',
+    'order_confirmation_regards' => 'شكراً لاختيارك MyStoryana.',
 
     // Order Status Email
     'order_status_mail_title' => 'تحديث حالة الطلب - #:id',
@@ -107,7 +107,7 @@ return [
     'order_status_message_cancelled' => 'تم إلغاء طلبك. يرجى التواصل معنا إذا كان ذلك غير متوقع.',
     'order_status_mail_view_order_button' => 'عرض الطلب',
     'order_status_mail_help_text' => 'لو عندك أي سؤال، نحن هنا للمساعدة.',
-    'order_status_mail_regards' => 'شكراً لاختيار MyStoriesAi.',
+    'order_status_mail_regards' => 'شكراً لاختيار MyStoryana.',
 
     // Payment Status Email
     'payment_status_mail_title' => 'تحديث حالة الدفع - الطلب #:id',
@@ -124,7 +124,7 @@ return [
     'payment_status_message_failed' => 'تعذر إتمام الدفع، يرجى المحاولة مرة أخرى.',
     'payment_status_message_refunded' => 'تم استرداد قيمة الدفع.',
     'payment_status_mail_help_text' => 'إذا تحتاج مساعدة، تواصل معنا.',
-    'payment_status_mail_regards' => 'شكراً لاختيار MyStoriesAi.',
+    'payment_status_mail_regards' => 'شكراً لاختيار MyStoryana.',
 
     // PDF Uploaded Email
     'pdf_uploaded_mail_title' => 'قصتك جاهزة PDF - الطلب #:id',
@@ -144,7 +144,7 @@ return [
     'pdf_uploaded_mail_download_button' => 'تحميل القصة',
     'pdf_uploaded_mail_view_order_button' => 'عرض تفاصيل الطلب',
     'pdf_uploaded_mail_help_text' => 'إذا احتجت أي مساعدة، تواصل مع الدعم.',
-    'pdf_uploaded_mail_regards' => 'نتمنى لكم وقتاً ممتعاً مع MyStoriesAi.',
+    'pdf_uploaded_mail_regards' => 'نتمنى لكم وقتاً ممتعاً مع MyStoryana.',
 
     // Continue Payment Reminder Email
     'continue_payment_reminder_title' => 'أكمل الدفع لطلبك رقم #:id',
@@ -155,11 +155,11 @@ return [
     'continue_payment_reminder_total_label' => 'المبلغ المطلوب',
     'continue_payment_reminder_note' => 'للاحتفاظ بطلبك نشطاً، يرجى إكمال الدفع الآن.',
     'continue_payment_reminder_button' => 'متابعة الدفع',
-    'continue_payment_reminder_regards' => 'شكراً لك، فريق MyStoriesAi',
+    'continue_payment_reminder_regards' => 'شكراً لك، فريق MyStoryana',
 
     // Common
     'regards' => 'أطيب التحيات',
-    'team_name' => 'فريق MyStoriesAi',
+    'team_name' => 'فريق MyStoryana',
     'official_website' => 'الموقع الرسمي',
     'contact_us' => 'اتصل بنا',
     'all_rights_reserved' => 'جميع الحقوق محفوظة.',

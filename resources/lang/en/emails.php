@@ -7,15 +7,15 @@ return [
     'password_reset_intro' => 'You are receiving this email because we received a password reset request for your account.',
     'password_reset_button' => 'Reset Password',
     'password_reset_outro' => 'If you did not request a password reset, no further action is required.',
-    'password_reset_regards' => 'Best regards, The MyStoriesAi Team',
+    'password_reset_regards' => 'Best regards, The MyStoryana Team',
 
     // Email Verification
     'email_verification_subject' => 'Verify Email Address',
     'email_verification_greeting' => 'Hello :name!',
-    'email_verification_intro' => 'Thank you for joining MyStoriesAi! Please click the button below to verify your email address.',
+    'email_verification_intro' => 'Thank you for joining MyStoryana! Please click the button below to verify your email address.',
     'email_verification_button' => 'Verify Email',
     'email_verification_outro' => 'If you did not create this account, you can safely ignore this email.',
-    'email_verification_regards' => 'Best regards, The MyStoriesAi Team',
+    'email_verification_regards' => 'Best regards, The MyStoryana Team',
 
     // Order Emails
     'new_order_admin_subject' => 'New Order Created - #:id',
@@ -66,7 +66,7 @@ return [
     'notify_admin_story_format_label' => 'Plan',
     'notify_admin_story_price_label' => 'Price',
     'notify_admin_view_order_button' => 'View Order Details',
-    'notify_admin_regards' => 'Best regards, The MyStoriesAi Team',
+    'notify_admin_regards' => 'Best regards, The MyStoryana Team',
 
     // User Order Confirmation Email
     'order_confirmation_title' => 'Thank you, :name',
@@ -89,7 +89,7 @@ return [
     'order_confirmation_next_step_3' => '3) You receive progress emails.',
     'order_confirmation_view_order_button' => 'View My Order',
     'order_confirmation_help_text' => 'If you have any questions, please contact us anytime.',
-    'order_confirmation_regards' => 'Thank you for choosing MyStoriesAi.',
+    'order_confirmation_regards' => 'Thank you for choosing MyStoryana.',
 
     // Order Status Email
     'order_status_mail_title' => 'Order Status Update - #:id',
@@ -107,7 +107,7 @@ return [
     'order_status_message_cancelled' => 'Your order has been cancelled. Please contact support if this is unexpected.',
     'order_status_mail_view_order_button' => 'View Order',
     'order_status_mail_help_text' => 'If you have any questions, we are here to help.',
-    'order_status_mail_regards' => 'Thank you for choosing MyStoriesAi.',
+    'order_status_mail_regards' => 'Thank you for choosing MyStoryana.',
 
     // Payment Status Email
     'payment_status_mail_title' => 'Payment Status Update - Order #:id',
@@ -124,7 +124,7 @@ return [
     'payment_status_message_failed' => 'Your payment could not be completed. Please try again.',
     'payment_status_message_refunded' => 'Your payment has been refunded.',
     'payment_status_mail_help_text' => 'If you need help, please contact us.',
-    'payment_status_mail_regards' => 'Thank you for choosing MyStoriesAi.',
+    'payment_status_mail_regards' => 'Thank you for choosing MyStoryana.',
 
     // PDF Uploaded Email
     'pdf_uploaded_mail_title' => 'Your Story PDF is Ready - Order #:id',
@@ -144,7 +144,7 @@ return [
     'pdf_uploaded_mail_download_button' => 'Download Story',
     'pdf_uploaded_mail_view_order_button' => 'View Order Details',
     'pdf_uploaded_mail_help_text' => 'If you need any help, contact our support team.',
-    'pdf_uploaded_mail_regards' => 'Enjoy your story with MyStoriesAi.',
+    'pdf_uploaded_mail_regards' => 'Enjoy your story with MyStoryana.',
 
     // Continue Payment Reminder Email
     'continue_payment_reminder_title' => 'Complete Your Payment for Order #:id',
@@ -155,11 +155,11 @@ return [
     'continue_payment_reminder_total_label' => 'Amount To Pay',
     'continue_payment_reminder_note' => 'To keep your order active, please complete your payment now.',
     'continue_payment_reminder_button' => 'Continue Payment',
-    'continue_payment_reminder_regards' => 'Thank you, The MyStoriesAi Team',
+    'continue_payment_reminder_regards' => 'Thank you, The MyStoryana Team',
 
     // Common
     'regards' => 'Best regards',
-    'team_name' => 'The MyStoriesAi Team',
+    'team_name' => 'The MyStoryana Team',
     'official_website' => 'Official Website',
     'contact_us' => 'Contact Us',
     'all_rights_reserved' => 'All rights reserved.',

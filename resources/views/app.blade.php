@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
-  <title inertia>{{ config('app.name', 'MyStoriesAi') }}</title>
+  <title inertia>{{ config('app.name', 'MyStoryana') }}</title>
 
   <!-- Favicons -->
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">

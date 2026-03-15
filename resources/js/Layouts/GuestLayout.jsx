@@ -45,7 +45,7 @@ export default function GuestLayout({ children, title = 'Authentication' }) {
                 <div className="relative z-10 text-center">
                   <div className="mb-8">
                     <img
-                      src="/assets/auth/logo.png"
+                      src="/assets/auth/logo.webp"
                       alt="MyStories AI Logo"
                       className="w-32 h-32 lg:w-48 lg:h-48 mx-auto object-contain drop-shadow-2xl"
                       onError={(e) => {

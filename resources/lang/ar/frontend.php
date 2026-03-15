@@ -415,7 +415,7 @@ return [
   'view_all_orders' => 'عرض جميع الطلبات',
 
   /* Footer */
-  'MyStoriesAi_description' => 'نحو تحويل أفكارك إلى قصص لا تُنسى. بسرعة، بصوت بشري، وبأسلوب رائع.',
+  'MyStoryana_description' => 'نحو تحويل أفكارك إلى قصص لا تُنسى. بسرعة، بصوت بشري، وبأسلوب رائع.',
   'footer_logo_alt' => 'شعار ماي ستوريز آي',
   'footer_tagline_line1' => 'نحو تحويل أفكارك إلى',
   'footer_tagline_line2' => 'قصص لا تُنسى.',
@@ -704,7 +704,7 @@ return [
   'child_story' => 'قصة :name',
 
   // SEO Meta Tags
-  'seo_site_name' => 'MyStoriesAi',
+  'seo_site_name' => 'MyStoryana',
   'seo_home_title' => ' قصص أطفال ',
   'seo_home_description' => 'أنشئ قصصًا مخصصة لطفلك بالذكاء الاصطناعي. يصبح طفلك بطل القصة — باسمه وصورته وقيمه. ابدأ الإنشاء اليوم!',
   'seo_home_keywords' => 'قصص أطفال مخصصة، كتب للأطفال، قصة مخصصة، قصص تعليمية، هدايا الأطفال',
