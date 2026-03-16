@@ -61,7 +61,7 @@ class OrderController extends Controller
       ];
     }
 
-    $settings = SiteSetting::whereIn('key', ['first_plan_price', 'second_plan_price'/*, 'third_plan_price'*/])
+    $settings = SiteSetting::whereIn('key', ['first_plan_price', 'second_plan_price', 'third_plan_price'])
       ->pluck('value', 'key')
       ->map(function ($value) {
         return is_numeric($value) ? (float) $value : 0;

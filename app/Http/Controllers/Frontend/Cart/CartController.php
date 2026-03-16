@@ -31,7 +31,7 @@ class CartController extends Controller
             'child_age' => ['required', 'integer', 'min:1'],
             'language' => ['required', 'string', 'in:arabic,english,german,turkish,english_german,arabic_german,turkish_german'],
             'child_gender' => ['required', 'string', 'in:boy,girl'],
-            'format' => ['required', 'string', 'in:first_plan,second_plan'],
+            'format' => ['required', 'string', 'in:first_plan,second_plan,third_plan'],
             'story_theme' => ['nullable', 'integer', 'min:1', 'max:10'],
             'value' => ['nullable', 'array', 'min:1'],
             'value.*' => ['string', 'in:honesty,kindness,courage,respect,responsibility,friendship,perseverance,creativity'],
@@ -266,14 +266,14 @@ class CartController extends Controller
 
     private function calculatePrices($format)
     {
-        $pricing = SiteSetting::whereIn('key', ['first_plan_price', 'second_plan_price'/*, 'third_plan_price'*/])
+        $pricing = SiteSetting::whereIn('key', ['first_plan_price', 'second_plan_price', 'third_plan_price'])
             ->pluck('value', 'key')
             ->map(fn($value) => is_numeric($value) ? (float) $value : 0);
 
         $storyPrice = match($format) {
             'first_plan' => $pricing['first_plan_price'] ?? 0,
             'second_plan' => $pricing['second_plan_price'] ?? 0,
-            // 'third_plan' => $pricing['third_plan_price'] ?? 0,
+            'third_plan' => $pricing['third_plan_price'] ?? 0,
             default => 0,
         };
 

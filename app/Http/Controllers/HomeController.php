@@ -28,6 +28,8 @@ class HomeController extends Controller
       'first_plan_old_price',
       'second_plan_price',
       'second_plan_old_price',
+      'third_plan_price',
+      'third_plan_old_price',
       'how_it_works_video',
     ])->pluck('value', 'key')->toArray();
 

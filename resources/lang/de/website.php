@@ -231,12 +231,13 @@ $main= [
 
   /* Pricing Settings */
   'pricing_settings' => 'Preiseinstellungen',
-  'first_plan_price' => 'Taschenbuch + kostenlose PDF-Kopie',
+  'first_plan_price' => 'A5 Geschichtenbuch - Hardcover',
   'first_plan_old_price' => 'Alter Preis Plan 1 (nur Anzeige)',
   'price' => 'Preis',
-  'second_plan_price' => 'Premium-Geschenkausgabe + kostenlose PDF',
+  'second_plan_price' => 'A4 Geschichtenbuch - Hardcover',
   'second_plan_old_price' => 'Alter Preis Plan 2 (nur Anzeige)',
-  'third_plan_price' => 'Sammleredition – limitiert (exklusiv)',
+  'third_plan_price' => 'Premium Geschenkedition',
+  'third_plan_old_price' => 'Alter Preis Plan 3 (nur Anzeige)',
 
 
   /* Delivery Options */

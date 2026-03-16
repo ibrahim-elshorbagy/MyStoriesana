@@ -175,32 +175,38 @@ return [
 
   'pricing_section_title' => 'Wählen Sie Ihr Kinderbuch – Machen Sie Ihr Kind zum Helden!',
 
-  'pricing_first_plan_title' => '📕 Hardcover-Buch im A4-Format',
-  'pricing_first_plan_price' => '44.99',
-  'pricing_first_plan_desc' => 'Robustes Hardcover, das jahrelang hält',
-  'pricing_first_plan_btn' => 'Hardcover-Geschichte erstellen',
-  'plan_1_feature_1' => '✔ Robust und langlebig',
-  'plan_1_feature_2' => '✔ Perfekt zum Vorlesen am Abend',
-  'plan_1_feature_3' => '✔ Vollständig personalisierte Geschichte für Ihr Kind',
-  'plan_1_feature_5' => '✔ Ein besonderes Geschenk für jeden Anlass',
+  'pricing_first_plan_title' => '📘 Geschichtenbuch A5 - Hardcover',
+  'pricing_first_plan_price' => '34.49',
+  'pricing_first_plan_desc' => 'Leicht und perfekt für das tägliche Lesen.',
+  'pricing_first_plan_btn' => 'Erstelle deine Geschichte',
+  'plan_1_feature_1' => '✔ Für Kinder leicht zu halten und zu lesen',
+  'plan_1_feature_2' => '✔ Gleicher vollständig personalisierter Inhalt',
+  'plan_1_feature_3' => '✔ Robustes Hardcover',
+  'plan_1_feature_5' => '✔ Ideal für jüngere Kinder und tägliches Vorlesen vor dem Schlafen',
 
-  'pricing_second_plan_title' => '📘 Hardcover-Buch im A5-Format',
-  'pricing_second_plan_price' => '29.99',
-  'pricing_second_plan_desc' => 'Leicht, handlich und ideal für den Alltag',
-  'pricing_second_plan_btn' => 'Taschenbuch jetzt erstellen',
+  'pricing_second_plan_title' => '📕 Geschichtenbuch A4 - Hardcover',
+  'pricing_second_plan_price' => '44.49',
+  'pricing_second_plan_desc' => 'Größeres Format für ein noch schöneres Leseerlebnis.',
+  'pricing_second_plan_note' => 'Nur 10€ mehr für das größere Format',
+  'pricing_second_plan_btn' => 'Erstelle deine Geschichte',
   'pricing_most_popular' => 'Am beliebtesten',
-  'plan_2_feature_1' => '✔ Leicht und einfach zu halten',
-  'plan_2_feature_2' => '✔ Dieselbe personalisierte Geschichte',
-  'plan_2_feature_3' => '✔ Ideal fürs tägliche Vorlesen',
-  'plan_2_feature_5' => '✔ Perfekt für erste Erfahrungen und jüngere Kinder',
+  'plan_2_feature_1' => '✔ Hochwertiges Hardcover, das jahrelang hält',
+  'plan_2_feature_2' => '✔ Größere Seiten für klarere und schönere Illustrationen',
+  'plan_2_feature_3' => '✔ Perfekt zum Vorlesen vor dem Schlafengehen',
+  'plan_2_feature_5' => '✔ Besonderes Geschenk für Geburtstage und Anlässe',
+
+  'pricing_third_plan_title' => '🎁 Premium Geschenkedition',
+  'pricing_third_plan_price' => '54.49',
+  'pricing_third_plan_desc' => 'Das beste personalisierte Bucherlebnis als Geschenk.\nPerfekt für Geburtstage und besondere Anlässe.',
+  'pricing_third_plan_btn' => 'Geschenkgeschichte erstellen',
+  'plan_3_feature_1' => '✔ A4-Hardcover-Buch',
+  'plan_3_feature_2' => '✔ Elegant vorbereitet und geschenktauglich',
+  'plan_3_feature_3' => '✔ Digitale PDF-Version der Geschichte',
+  'plan_3_feature_4' => '✔ Priorisierte Bearbeitung',
 
   'pricing_vat_shipping' => 'Inkl. Mwst. | Gratis Versand',
 
-  'pricing_additional_text' => '📘 Ein Buch, das kombiniert
-                                Eine personalisierte Geschichte für Ihr Kind
-                                Und interaktive Lernaktivitäten
-                                Ohne Bildschirme
-                                Für kurze Zeit zum Launch verfügbar',
+  'pricing_additional_text' => '🎁 Sonderangebot\n\nKaufen Sie 2 Bücher und erhalten Sie 20% Rabatt mit dem Code BUY2\n\nIdeal für Geschwister oder als Geschenk für Großeltern.',
   // End Pricing
 
   // FAQs Section
@@ -231,6 +237,7 @@ return [
   'format' => 'Format',
   'format_first_plan' => '📕 Hardcover-Buch',
   'format_second_plan' => '📘 Taschenbuch',
+  'format_third_plan' => '🎁 Premium Geschenkedition (A4 + PDF)',
   'learning_value' => 'Lernwert',
   'select_learning_value' => 'Lernwert auswählen',
   'custom_learning_value' => 'Schreibe alle Details, die wir in die Geschichte einbauen sollen, oder eine kurze Situation/Herausforderung, die die Geschichte aufgreifen soll — wir versuchen, so viel wie möglich passend zum Story-Kontext zu integrieren (optional)…',

@@ -213,12 +213,13 @@ $main = [
 
   /* Pricing Settings */
   'pricing_settings' => 'Pricing Settings',
-  'first_plan_price' => 'Paperback Book + Free PDF Copy',
+  'first_plan_price' => 'A5 Storybook - Hardcover',
   'first_plan_old_price' => 'First Plan Old Price (Showcase Only)',
   'price' => 'Price',
-  'second_plan_price' => 'Premium Gift Edition + Free PDF',
+  'second_plan_price' => 'A4 Storybook - Hardcover',
   'second_plan_old_price' => 'Second Plan Old Price (Showcase Only)',
-  'third_plan_price' => 'Collector\'s Limited Edition (Exclusive)',
+  'third_plan_price' => 'Premium Gift Edition',
+  'third_plan_old_price' => 'Third Plan Old Price (Showcase Only)',
 
   /* Delivery Options */
   'delivery_options' => 'Delivery Options',

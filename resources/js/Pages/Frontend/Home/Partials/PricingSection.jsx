@@ -21,9 +21,8 @@ export default function PricingSection({ settings = {} }) {
         "plan_1_feature_3",
         "plan_1_feature_5",
       ],
-      cardClass: "border-2 border-teal-300 bg-gradient-to-b from-blue-50 via-purple-50 to-white relative shadow-2xl scale-105 z-10",
-      btnClass: "bg-gradient-to-r from-teal-400 to-purple-500 hover:from-teal-500 hover:to-purple-600 text-white font-bold shadow-lg",
-      badge: true,
+      cardClass: "border border-gray-200 bg-white",
+      btnClass: "bg-orange-500 hover:bg-orange-600 text-white",
     },
     {
       key: "second_plan",
@@ -38,24 +37,27 @@ export default function PricingSection({ settings = {} }) {
         "plan_2_feature_3",
         "plan_2_feature_5",
       ],
-      cardClass: "border border-gray-200 bg-white",
-      btnClass: "bg-gray-400 hover:bg-gray-500 text-white",
+      note: "pricing_second_plan_note",
+      cardClass: "border-2 border-teal-300 bg-gradient-to-b from-blue-50 via-purple-50 to-white relative shadow-2xl scale-105 z-10",
+      btnClass: "bg-gradient-to-r from-teal-400 to-purple-500 hover:from-teal-500 hover:to-purple-600 text-white font-bold shadow-lg",
+      badge: true,
     },
-    // {
-    //   key: "third_plan",
-    //   title: "pricing_third_plan_title",
-    //   price: settings.third_plan_price || t("pricing_third_plan_price"),
-    //   desc: "pricing_third_plan_desc",
-    //   btn: "pricing_third_plan_btn",
-    //   features: [
-    //     "plan_3_feature_1",
-    //     "plan_3_feature_2",
-    //     "plan_3_feature_3",
-    //     "plan_3_feature_4",
-    //   ],
-    //   cardClass: "border border-yellow-200 bg-gradient-to-b from-yellow-50 to-white",
-    //   btnClass: "bg-gradient-to-r from-yellow-400 to-blue-700 hover:from-yellow-500 hover:to-blue-800 text-white",
-    // },
+    {
+      key: "third_plan",
+      title: "pricing_third_plan_title",
+      oldPrice: settings.third_plan_old_price,
+      price: getDisplayedPrice(settings.third_plan_price, "pricing_third_plan_price"),
+      desc: "pricing_third_plan_desc",
+      btn: "pricing_third_plan_btn",
+      features: [
+        "plan_3_feature_1",
+        "plan_3_feature_2",
+        "plan_3_feature_3",
+        "plan_3_feature_4",
+      ],
+      cardClass: "border border-yellow-200 bg-gradient-to-b from-yellow-50 to-white",
+      btnClass: "bg-gradient-to-r from-yellow-400 to-blue-700 hover:from-yellow-500 hover:to-blue-800 text-white",
+    },
   ];
 
   return (
@@ -134,7 +136,7 @@ export default function PricingSection({ settings = {} }) {
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">
           {t("pricing_section_title")}
         </h2>
-        <div className="grid lg:grid-cols-2 sm:p-8 gap-8 max-w-7xl mx-auto">
+        <div className="grid lg:grid-cols-3 sm:p-8 gap-8 max-w-7xl mx-auto">
           {PRICING.map((pkg) => (
             <div
               key={pkg.key}
@@ -142,7 +144,7 @@ export default function PricingSection({ settings = {} }) {
             >
               {pkg.badge && (
                 <span className="absolute top-4 right-4 px-3 py-1 rounded-full bg-purple-500 text-white font-bold text-xs shadow-lg flex items-center">
-                  <i className="fa-solid fa-star mr-2 text-yellow-300"></i>
+                  <i className="fa-solid fa-star ltr:mr-2 rtl:ml-2 text-yellow-300"></i>
                   {t("pricing_most_popular")}
                 </span>
               )}
@@ -156,6 +158,7 @@ export default function PricingSection({ settings = {} }) {
                   )}
                   <p className="text-2xl sm:text-2xl font-extrabold text-gray-900">{pkg.price} {t('currency')}</p>
                   <p className="text-xs sm:text-sm text-gray-500">{t('pricing_vat_shipping')}</p>
+                  {pkg.note && <p className="text-xs sm:text-sm text-orange-700 font-semibold">{t(pkg.note)}</p>}
                   <p className="text-sm sm:text-base text-gray-600">{t(pkg.desc)}</p>
                   <ul className="mt-4 text-gray-700 list-disc list-inside space-y-1 ltr:text-left rtl:text-right text-xs sm:text-sm">
                     {pkg.features.map((featKey) => (

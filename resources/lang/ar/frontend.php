@@ -182,32 +182,38 @@ return [
 
   'pricing_section_title' => 'اختر كتاب طفلك – اجعل طفلك البطل!',
 
-  'pricing_first_plan_title' => '📕 كتاب بغلاف مقوّى مقاس A4',
-  'pricing_first_plan_price' => '44.99',
-  'pricing_first_plan_desc' => 'كتاب بغلاف مقوّى متين ويدوم لسنوات',
-  'pricing_first_plan_btn' => 'ابدأ قصة طفلك',
-  'plan_1_feature_1' => '✔ متين ويدوم لسنوات',
-  'plan_1_feature_2' => '✔ تجربة قراءة قبل النوم',
-  'plan_1_feature_3' => '✔ قصة مخصصة بالكامل لطفلك',
-  'plan_1_feature_5' => '✔ هدية مثالية للمناسبات',
+  'pricing_first_plan_title' => '📘 كتاب القصة مقاس A5 - غلاف مقوى',
+  'pricing_first_plan_price' => '34.49',
+  'pricing_first_plan_desc' => 'خفيف الوزن ومثالي للقراءة اليومية.',
+  'pricing_first_plan_btn' => 'أنشئ قصتك',
+  'plan_1_feature_1' => '✔ سهل على الأطفال الإمساك به وقراءته',
+  'plan_1_feature_2' => '✔ نفس محتوى القصة المخصصة بالكامل',
+  'plan_1_feature_3' => '✔ غلاف مقوى متين',
+  'plan_1_feature_5' => '✔ مثالي للأطفال الأصغر والقراءة اليومية قبل النوم',
 
-  'pricing_second_plan_title' => '📘 كتاب بغلاف مقوّى مقاس A5',
-  'pricing_second_plan_price' => '29.99',
-  'pricing_second_plan_desc' => 'كتاب بغلاف ورقي خفيف وسهل الاستخدام',
-  'pricing_second_plan_btn' => 'اطلب نسختك الورقية الآن',
-  'pricing_most_popular' => 'الأكثر اختيارا',
-  'plan_2_feature_1' => '✔ خفيف وسهل الاستخدام',
-  'plan_2_feature_2' => '✔ نفس القصة المخصصة',
-  'plan_2_feature_3' => '✔ مناسب للقراءة اليومية',
-  'plan_2_feature_5' => '✔مثالي للتجربه الاولي ولصغار السن',
+  'pricing_second_plan_title' => '📕 كتاب القصة مقاس A4 - غلاف مقوى',
+  'pricing_second_plan_price' => '44.49',
+  'pricing_second_plan_desc' => 'حجم أكبر لتجربة قراءة أكثر متعة.',
+  'pricing_second_plan_note' => 'فقط 10€ إضافية للحصول على الحجم الأكبر',
+  'pricing_second_plan_btn' => 'أنشئ قصتك',
+  'pricing_most_popular' => 'الأكثر اختيارًا',
+  'plan_2_feature_1' => '✔ غلاف مقوى فاخر يدوم لسنوات',
+  'plan_2_feature_2' => '✔ صفحات أكبر لرسومات أوضح وأجمل',
+  'plan_2_feature_3' => '✔ مثالي لقراءة القصص قبل النوم',
+  'plan_2_feature_5' => '✔ هدية مميزة لأعياد الميلاد والمناسبات',
+
+  'pricing_third_plan_title' => '🎁 النسخة المميزة كهدية',
+  'pricing_third_plan_price' => '54.49',
+  'pricing_third_plan_desc' => 'أفضل تجربة كتاب مخصص كهدية.\nمثالي لأعياد الميلاد والمناسبات الخاصة.',
+  'pricing_third_plan_btn' => 'أنشئ قصة كهدية',
+  'plan_3_feature_1' => '✔ كتاب مقاس A4 بغلاف مقوى',
+  'plan_3_feature_2' => '✔ تجهيز أنيق مناسب للهدايا',
+  'plan_3_feature_3' => '✔ نسخة رقمية PDF من القصة',
+  'plan_3_feature_4' => '✔ أولوية في التنفيذ',
 
   'pricing_vat_shipping' => 'شامل الضريبه وتوصيل مجاني',
 
-  'pricing_additional_text' => '📘 كتاب واحد يجمع بين
-قصة مخصصة لطفلك
-وأنشطة تعليمية تفاعلية
-بدون أي شاشات
-متاح مع طلبات الإطلاق ولفترة محدودة',
+  'pricing_additional_text' => '🎁 عرض خاص\n\nاشترِ كتابين واحصل على خصم ٢٠٪ من خلال الكود BUY2\n\nمثالي للأخوة أو كهدية للأجداد.',
   // End Pricing
 
   // FAQs Section
@@ -238,6 +244,7 @@ return [
   'format' => 'التنسيق',
   'format_first_plan' => '📕 كتاب بغلاف مقوّى (Hardcover)',
   'format_second_plan' => '📘 كتاب بغلاف ورقي (Paperback)',
+  'format_third_plan' => '🎁 نسخة هدية مميزة (A4 + PDF)',
   'learning_value' => 'القيمة التعليمية',
   'select_learning_value' => 'اختر القيمة التعليمية',
   'custom_learning_value' => 'اكتب أي تفاصيل تحب نضيفها للقصة أو موقف/تحدّي بسيط تحب القصة تعلّق عليه — هنحاول نضيف أكبر قدر ممكن بما يناسب سياق القصة (اختياري)…',

@@ -8,7 +8,7 @@ export default function HowItWorks() {
   const options = [
     {
       key: 'quick-customize',
-      image: '/assets/home/HowItWorks2.png',
+      image: '/assets/home/HowItWorks2.webp',
       title: t('how_it_works_option2_title'),
       badge: t('how_it_works_option2_badge'),
       features: [
@@ -33,7 +33,7 @@ export default function HowItWorks() {
     },
     {
       key: 'create-story',
-      image: '/assets/home/HowItWorks1.png',
+      image: '/assets/home/HowItWorks1.webp',
       title: t('how_it_works_option1_title'),
       badge: t('how_it_works_option1_badge'),
       features: [
@@ -59,7 +59,7 @@ export default function HowItWorks() {
 
     {
       key: 'free-name-story',
-      image: '/assets/home/HowItWorks3.png',
+      image: '/assets/home/HowItWorks3.webp',
       title: t('how_it_works_option3_title'),
       badge: t('how_it_works_option3_badge'),
       features: [

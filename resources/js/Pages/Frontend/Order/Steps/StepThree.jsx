@@ -14,7 +14,7 @@ export default function StepThree({
   const formatOptions = {
     first_plan: t('format_first_plan'),
     second_plan: t('format_second_plan'),
-    // third_plan: t('format_third_plan'),
+    third_plan: t('format_third_plan'),
   };
 
   const genderOptions = {

@@ -142,12 +142,13 @@ $main = [
 
   /* Pricing Settings */
   'pricing_settings' => 'إعدادات التسعير',
-  'first_plan_price' => 'غلاف ورقي + نسخة PDF مجانية',
+  'first_plan_price' => 'كتاب مقاس A5 - غلاف مقوى',
   'first_plan_old_price' => 'السعر القديم للخطة الأولى (للعرض فقط)',
   'price' => 'سعر',
-  'second_plan_price' =>'نسخة هدايا فاخرة + PDF مجاني',
+  'second_plan_price' =>'كتاب مقاس A4 - غلاف مقوى',
   'second_plan_old_price' => 'السعر القديم للخطة الثانية (للعرض فقط)',
-  'third_plan_price' =>  'النسخة التذكارية الخاصة (إصدار محدود)',
+  'third_plan_price' =>  'النسخة المميزة كهدية',
+  'third_plan_old_price' => 'السعر القديم للخطة الثالثة (للعرض فقط)',
 
   /* Delivery Options */
   'delivery_options' => 'خيارات التوصيل',

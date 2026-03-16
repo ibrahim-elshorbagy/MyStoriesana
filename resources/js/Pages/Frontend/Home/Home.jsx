@@ -44,7 +44,7 @@ export default function Home({ stories, faqs, categories, settings, textFeedback
       <div className="relative w-full">
         <img
           className="w-full h-auto object-cover"
-          src={`/assets/home/${locale}.png`}
+          src={`/assets/home/${locale}.webp`}
           alt=""
           loading="lazy"
           decoding="async"

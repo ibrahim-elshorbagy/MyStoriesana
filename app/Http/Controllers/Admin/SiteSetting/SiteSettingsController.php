@@ -41,6 +41,12 @@ class SiteSettingsController extends Controller
   {
     $request->validate([
       'settings' => 'required|array',
+      'settings.first_plan_price' => 'nullable|numeric|min:0',
+      'settings.first_plan_old_price' => 'nullable|numeric|min:0',
+      'settings.second_plan_price' => 'nullable|numeric|min:0',
+      'settings.second_plan_old_price' => 'nullable|numeric|min:0',
+      'settings.third_plan_price' => 'nullable|numeric|min:0',
+      'settings.third_plan_old_price' => 'nullable|numeric|min:0',
       'env_settings' => 'array', // Optional array of settings that should go to .env
       'files.site_logo' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg',
       'files.site_favicon' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg,ico',

@@ -13,6 +13,7 @@ export default function PricingSettings({ settings }) {
       second_plan_price: settings.second_plan_price || '',
       second_plan_old_price: settings.second_plan_old_price || '',
       third_plan_price: settings.third_plan_price || '',
+      third_plan_old_price: settings.third_plan_old_price || '',
     }
   });
 
@@ -37,7 +38,7 @@ export default function PricingSettings({ settings }) {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div>
             <label className="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-2">
-              Paperback
+              {t('first_plan_price')}
             </label>
             <TextInput
               type="number"
@@ -63,7 +64,7 @@ export default function PricingSettings({ settings }) {
 
           <div>
             <label className="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-2">
-              Hardcover
+              {t('second_plan_price')}
             </label>
             <TextInput
               type="number"
@@ -87,7 +88,7 @@ export default function PricingSettings({ settings }) {
             {errors['settings.second_plan_old_price'] && <p className="text-red-500 text-sm mt-1">{errors['settings.second_plan_old_price']}</p>}
           </div>
 
-          {/* <div>
+          <div>
             <label className="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-2">
               {t('third_plan_price')}
             </label>
@@ -96,10 +97,22 @@ export default function PricingSettings({ settings }) {
               value={data.settings.third_plan_price}
               onChange={(e) => setData('settings', { ...data.settings, third_plan_price: e.target.value })}
               className="px-3 py-2"
-              placeholder="549"
+              placeholder="54.49"
             />
             {errors['settings.third_plan_price'] && <p className="text-red-500 text-sm mt-1">{errors['settings.third_plan_price']}</p>}
-          </div> */}
+
+            <label className="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-2 mt-4">
+              {t('third_plan_old_price')}
+            </label>
+            <TextInput
+              type="number"
+              value={data.settings.third_plan_old_price}
+              onChange={(e) => setData('settings', { ...data.settings, third_plan_old_price: e.target.value })}
+              className="px-3 py-2"
+              placeholder=""
+            />
+            {errors['settings.third_plan_old_price'] && <p className="text-red-500 text-sm mt-1">{errors['settings.third_plan_old_price']}</p>}
+          </div>
         </div>
 
         <div className="pt-4 border-t border-neutral-200 dark:border-neutral-800 flex items-center gap-4">

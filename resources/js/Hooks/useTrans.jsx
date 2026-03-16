@@ -6,7 +6,8 @@ export function useTrans() {
     Object.entries(replacements).forEach(([k, v]) => {
       value = value.replace(`:${k}`, v)
     })
-    return value
+    // Decode escaped newline sequences coming from translation payloads.
+    return value.replace(/\\r\\n|\\n|\\r/g, '\n')
   }
 
   return { t }
