@@ -226,6 +226,8 @@ return [
 
     ],
 
+    'child_image_required' => 'Das Kinderbild ist erforderlich.',
+
     'attributes' => [
         'area' => 'Bereich',
         'street' => 'Straße',

@@ -676,4 +676,8 @@ return [
   'seo_cart_title' => 'Warenkorb',
   'seo_cart_details_title' => 'Warenkorbdetails',
 
+  'field_required' => ':field ist erforderlich.',
+  'learning_value_required' => 'Bitte wählen Sie mindestens einen Lernwert aus.',
+  'child_image_required' => 'Das Kinderbild ist erforderlich.',
+
 ];

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import TextInput from '@/Components/TextInput';
 import TextArea from '@/Components/TextArea';
 import SelectInput from '@/Components/SelectInput';
@@ -18,6 +18,62 @@ export default function StepOne({
   t,
   cameFromStepZero
 }) {
+
+  const [localErrors, setLocalErrors] = useState({});
+
+  const validateForm = () => {
+    const newErrors = {};
+
+    if (!data.child_name?.trim()) {
+      newErrors.child_name = t('field_required', { field: t('child_name') });
+    }
+
+    if (!data.child_age || data.child_age < 1) {
+      newErrors.child_age = t('field_required', { field: t('child_age') });
+    }
+
+    if (!data.language) {
+      newErrors.language = t('field_required', { field: t('language') });
+    }
+
+    if (!data.child_gender) {
+      newErrors.child_gender = t('field_required', { field: t('child_gender') });
+    }
+
+    if (!data.format) {
+      newErrors.format = t('field_required', { field: t('book_type') });
+    }
+
+    // Child image required only if not cameFromStepZero (i.e., story_id is null)
+    if (!cameFromStepZero && !imageFile) {
+      newErrors.child_image = t('child_image_required');
+    }
+
+    // Learning values required if not cameFromStepZero
+    if (!cameFromStepZero && (!data.value || data.value.length === 0)) {
+      newErrors.value = t('learning_value_required');
+    }
+
+    setLocalErrors(newErrors);
+
+    // If there are errors, scroll to the first one
+    if (Object.keys(newErrors).length > 0) {
+      const firstErrorField = Object.keys(newErrors)[0];
+      const element = document.getElementById(firstErrorField);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+      return false;
+    }
+
+    return true;
+  };
+
+  const handleNext = () => {
+    if (validateForm()) {
+      onNext();
+    }
+  };
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
@@ -139,7 +195,7 @@ export default function StepOne({
               required
               className="mt-1 block w-full"
             />
-            <InputError message={errors.child_name} className="mt-2" />
+            <InputError message={localErrors.child_name || errors.child_name} className="mt-2" />
           </div>
 
           <div>
@@ -154,7 +210,7 @@ export default function StepOne({
               required
               className="mt-1 block w-full"
             />
-            <InputError message={errors.child_age} className="mt-2" />
+            <InputError message={localErrors.child_age || errors.child_age} className="mt-2" />
           </div>
 
           <div>
@@ -167,7 +223,7 @@ export default function StepOne({
               label={t('language')}
               required
             />
-            <InputError message={errors.language} className="mt-2" />
+            <InputError message={localErrors.language || errors.language} className="mt-2" />
           </div>
 
           <div>
@@ -180,7 +236,7 @@ export default function StepOne({
               label={t('child_gender')}
               required
             />
-            <InputError message={errors.child_gender} className="mt-2" />
+            <InputError message={localErrors.child_gender || errors.child_gender} className="mt-2" />
           </div>
 
           <div >
@@ -193,7 +249,7 @@ export default function StepOne({
               label={t('book_type')}
               required
             />
-            <InputError message={errors.format} className="mt-2" />
+            <InputError message={localErrors.format || errors.format} className="mt-2" />
           </div>
 
           <div >
@@ -258,7 +314,7 @@ export default function StepOne({
           )}
 
           {/* Child Image */}
-          <div className="md:col-span-2">
+          <div className="md:col-span-2" id="child_image_section">
             <label className="block text-sm font-medium text-neutral-700 mb-2">
               {t('child_image')}
             </label>
@@ -310,7 +366,7 @@ export default function StepOne({
                 </div>
               )}
             </div>
-            <InputError message={errors.child_image} className="mt-2" />
+            <InputError message={localErrors.child_image || errors.child_image} className="mt-2" />
           </div>
 
 
@@ -411,7 +467,7 @@ export default function StepOne({
       <div className="flex justify-end">
         <button
           type="button"
-          onClick={onNext}
+          onClick={handleNext}
           className="px-10 py-4 bg-gradient-to-r from-orange-500 via-pink-500 to-purple-600 text-white font-bold rounded-2xl hover:from-orange-600 hover:via-pink-600 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
         >
           <span className="flex items-center gap-3 rtl:flex-row-reverse">

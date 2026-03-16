@@ -239,6 +239,8 @@ return [
 
     ],
 
+    'child_image_required' => 'صورة الطفل مطلوبة.',
+
     'attributes' => [
         'area' => 'المنطقة',
         'street' => 'الشارع',

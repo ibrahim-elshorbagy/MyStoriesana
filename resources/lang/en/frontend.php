@@ -671,4 +671,8 @@ return [
   'seo_cart_title' => 'My Cart',
   'seo_cart_details_title' => 'Cart Details',
 
+  'field_required' => ':field is required.',
+  'learning_value_required' => 'Please select at least one learning value.',
+  'child_image_required' => 'The child image is required.',
+
 ];

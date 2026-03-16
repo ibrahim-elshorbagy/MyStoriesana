@@ -36,7 +36,7 @@ class CartController extends Controller
             'value' => ['nullable', 'array', 'min:1'],
             'value.*' => ['string', 'in:honesty,kindness,courage,respect,responsibility,friendship,perseverance,creativity'],
             'custom_value' => ['nullable', 'string', 'max:500'],
-            'child_image' => ['nullable', 'file', 'image', 'mimes:jpeg,png,jpg,gif,webp', 'max:5120'],
+            'child_image' => ['required_if:story_id,null', 'nullable', 'file', 'image', 'mimes:jpeg,png,jpg,gif,webp', 'max:5120'],
             'hair_color' => ['nullable', 'string', 'max:255'],
             'hair_style' => ['nullable', 'string', 'max:255'],
             'eye_color' => ['nullable', 'string', 'max:255'],
@@ -46,6 +46,8 @@ class CartController extends Controller
             'accessory_description' => ['nullable', 'string', 'max:1000'],
             'personality_traits' => ['nullable', 'string', 'max:1000'],
             'moral_value' => ['nullable', 'string', 'max:500'],
+        ], [
+            'child_image.required_if' => __('validation.child_image_required'),
         ]);
 
         // Calculate prices server-side

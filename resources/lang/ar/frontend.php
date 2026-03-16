@@ -723,4 +723,8 @@ return [
   'seo_cart_title' => 'سلة التسوق ',
   'seo_cart_details_title' => 'تفاصيل السلة ',
 
+  'field_required' => ':field مطلوب.',
+  'learning_value_required' => 'يرجى اختيار قيمة تعليمية واحدة على الأقل.',
+  'child_image_required' => 'صورة الطفل مطلوبة.',
+
 ];

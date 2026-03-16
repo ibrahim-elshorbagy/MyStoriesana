@@ -239,6 +239,8 @@ return [
 
     ],
 
+    'child_image_required' => 'The child image is required.',
+
     'attributes' => [
         'area' => 'Area',
         'street' => 'Street',
