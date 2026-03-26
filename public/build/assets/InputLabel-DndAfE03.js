@@ -1,1 +1,0 @@
-import{u as n,j as x}from"./app-C-Orx0vb.js";function m({value:t,className:s="",children:a,...r}){const{url:e}=n(),o=e.startsWith("/dashboard");return x.jsx("label",{...r,className:`block text-sm font-medium ${o?"text-gray-700 dark:text-gray-300":"text-gray-700"} `+s,children:t||a})}export{m as I};

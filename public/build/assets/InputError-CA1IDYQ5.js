@@ -1,1 +1,0 @@
-import{u as o,j as n}from"./app-C-Orx0vb.js";function u({message:t,className:r="",...s}){const{url:e}=o(),a=e.startsWith("/dashboard");return t?n.jsx("p",{...s,className:`text-sm ${a?"text-red-600 dark:text-red-400":"text-red-600"} `+r,children:t}):null}export{u as I};

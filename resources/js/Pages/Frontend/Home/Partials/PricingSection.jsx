@@ -37,7 +37,7 @@ export default function PricingSection({ settings = {} }) {
         "plan_2_feature_3",
         "plan_2_feature_5",
       ],
-      note: "pricing_second_plan_note",
+      // note: "pricing_second_plan_note",
       cardClass: "border-2 border-teal-300 bg-gradient-to-b from-blue-50 via-purple-50 to-white relative shadow-2xl scale-105 z-10",
       btnClass: "bg-gradient-to-r from-teal-400 to-purple-500 hover:from-teal-500 hover:to-purple-600 text-white font-bold shadow-lg",
       badge: true,
