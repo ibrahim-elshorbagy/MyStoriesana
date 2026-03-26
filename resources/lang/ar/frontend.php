@@ -242,9 +242,11 @@ return [
   'gender_boy' => 'ولد',
   'gender_girl' => 'بنت',
   'format' => 'التنسيق',
-  'format_first_plan' => '📕 كتاب بغلاف مقوّى (Hardcover)',
-  'format_second_plan' => '📘 كتاب بغلاف ورقي (Paperback)',
-  'format_third_plan' => '🎁 نسخة هدية مميزة (A4 + PDF)',
+
+  'format_first_plan' => '📘 كتاب القصة مقاس A5 - غلاف مقوى',
+  'format_second_plan' => '📕 كتاب القصة مقاس A4 - غلاف مقوى',
+  'format_third_plan' => '🎁 النسخة المميزة كهدية',
+
   'learning_value' => 'القيمة التعليمية',
   'select_learning_value' => 'اختر القيمة التعليمية',
   'custom_learning_value' => 'اكتب أي تفاصيل تحب نضيفها للقصة أو موقف/تحدّي بسيط تحب القصة تعلّق عليه — هنحاول نضيف أكبر قدر ممكن بما يناسب سياق القصة (اختياري)…',
@@ -315,7 +317,7 @@ return [
   'choose_payment_method' => 'اختر طريقة الدفع',
   'select_payment_method' => 'اختر طريقة الدفع المفضلة لديك',
   'complete_payment' => 'إتمام الدفع',
-  'currency' => '€',
+  'currency' => 'جنيه',
   'years' => 'سنوات',
   'choose_file' => 'اختر ملفًا',
   'edit' => 'تعديل',

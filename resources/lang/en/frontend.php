@@ -235,9 +235,11 @@ return [
   'gender_boy' => 'Boy',
   'gender_girl' => 'Girl',
   'format' => 'Format',
-  'format_first_plan' => '📕 Hardcover Storybook',
-  'format_second_plan' => '📘 Paperback Storybook',
-  'format_third_plan' => '🎁 Premium Gift Edition (A4 + PDF)',
+
+  'format_first_plan' => '📘 A5 Storybook - Hardcover',
+  'format_second_plan' => '📕 A4 Storybook - Hardcover',
+  'format_third_plan' => '🎁 Premium Gift Edition',
+
   'learning_value' => 'Learning Value',
   'select_learning_value' => 'Select a Learning Value',
   'custom_learning_value' => 'Write any details you\'d like us to include in the story, or a simple situation/challenge you want the story to address — we\'ll try to include as much as possible in a way that fits the story (optional)…',
@@ -308,7 +310,7 @@ return [
   'choose_payment_method' => 'Choose Payment Method',
   'select_payment_method' => 'Select your preferred payment method',
   'complete_payment' => 'Complete Payment',
-  'currency' => '€',
+  'currency' => 'EGP',
   'years' => 'Years',
   'choose_file' => 'Choose File',
   'edit' => 'Edit',

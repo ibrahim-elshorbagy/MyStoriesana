@@ -235,9 +235,11 @@ return [
   'gender_boy' => 'Junge',
   'gender_girl' => 'Mädchen',
   'format' => 'Format',
-  'format_first_plan' => '📕 Hardcover-Buch',
-  'format_second_plan' => '📘 Taschenbuch',
-  'format_third_plan' => '🎁 Premium Geschenkedition (A4 + PDF)',
+
+  'format_first_plan' => '📘 Geschichtenbuch A5 - Hardcover',
+  'format_second_plan' => '📕 Geschichtenbuch A4 - Hardcover',
+  'format_third_plan' => '🎁 Premium Geschenkedition',
+
   'learning_value' => 'Lernwert',
   'select_learning_value' => 'Lernwert auswählen',
   'custom_learning_value' => 'Schreibe alle Details, die wir in die Geschichte einbauen sollen, oder eine kurze Situation/Herausforderung, die die Geschichte aufgreifen soll — wir versuchen, so viel wie möglich passend zum Story-Kontext zu integrieren (optional)…',
@@ -308,7 +310,7 @@ return [
   'choose_payment_method' => 'Zahlungsmethode wählen',
   'select_payment_method' => 'Bevorzugte Zahlungsmethode auswählen',
   'complete_payment' => 'Zahlung abschließen',
-  'currency' => '€',
+  'currency' => 'EGP',
   'years' => 'Jahre',
   'choose_file' => 'Datei auswählen',
   'edit' => 'Bearbeiten',
