@@ -215,6 +215,7 @@ return [
   'apply' => 'تطبيق',
   'remove_discount' => 'إزالة الخصم',
   'discount' => 'خصم',
+  'discount_minimum_books_required' => 'يتطلب هذا الخصم حد أدنى من :count كتب في سلتك',
 
   // Delivery Options Responses
   'delivery_option_created_title' => 'تم إنشاء خيار التوصيل',

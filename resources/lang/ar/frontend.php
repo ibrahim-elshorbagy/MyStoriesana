@@ -729,4 +729,6 @@ return [
   'learning_value_required' => 'يرجى اختيار قيمة تعليمية واحدة على الأقل.',
   'child_image_required' => 'صورة الطفل مطلوبة.',
 
+  
 ];
+

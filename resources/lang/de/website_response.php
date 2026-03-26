@@ -230,6 +230,7 @@ return [
   'apply' => 'Anwenden',
   'remove_discount' => 'Rabatt entfernen',
   'discount' => 'Rabatt',
+  'discount_minimum_books_required' => 'Dieser Rabatt erfordert mindestens :count Bücher in Ihrem Warenkorb',
 
   // Delivery Options Responses
   'delivery_option_created_title' => 'Lieferoption erstellt',

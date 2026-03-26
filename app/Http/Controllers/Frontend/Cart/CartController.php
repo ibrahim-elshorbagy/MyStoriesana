@@ -241,6 +241,27 @@ class CartController extends Controller
             ], 422);
         }
 
+        // Check minimum number of books requirement
+        if ($discount->number_of_books) {
+            $cart = Cart::where('user_id', Auth::id())->first();
+
+            if (!$cart) {
+                return response()->json([
+                    'success' => false,
+                    'message' => __('website_response.discount_minimum_books_required', ['count' => $discount->number_of_books]),
+                ], 422);
+            }
+
+            $cartItemsCount = $cart->cartItems()->count();
+
+            if ($cartItemsCount < $discount->number_of_books) {
+                return response()->json([
+                    'success' => false,
+                    'message' => __('website_response.discount_minimum_books_required', ['count' => $discount->number_of_books]),
+                ], 422);
+            }
+        }
+
         return response()->json([
             'success' => true,
             'message' => __('website_response.discount_applied'),

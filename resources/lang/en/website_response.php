@@ -212,6 +212,7 @@ return [
   'apply' => 'Apply',
   'remove_discount' => 'Remove discount',
   'discount' => 'Discount',
+  'discount_minimum_books_required' => 'This discount requires a minimum of :count books in your cart',
 
   // Delivery Options Responses
   'delivery_option_created_title' => 'Delivery Option Created',

@@ -541,6 +541,12 @@ $main= [
   'discount_validation_error' => 'Fehler bei der Validierung des Rabattcodes',
   'discount_value' => 'Rabattwert',
   'discount_applied' => 'Rabatt angewendet',
+  'number_of_books' => 'Anzahl der Bücher',
+  'enter_number_of_books' => 'Mindestanzahl der Bücher eingeben',
+  'discount_percent' => 'Rabatt Prozentsatz',
+  'enter_discount_percent' => 'Rabatt Prozentsatz eingeben',
+  'usage_limit' => 'Nutzungslimit',
+  'enter_usage_limit' => 'Nutzungslimit eingeben',
 
 ];
 

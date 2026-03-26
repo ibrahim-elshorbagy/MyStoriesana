@@ -42,6 +42,7 @@ export default function DiscountTable({ discounts, onEdit }) {
     { field: 'row_number', label: t('serial'), icon: 'fa-hashtag' },
     { field: 'code', label: t('discount_code'), icon: 'fa-ticket' },
     { field: 'percent', label: t('discount_percent'), icon: 'fa-percent' },
+    { field: 'number_of_books', label: t('number_of_books'), icon: 'fa-book' },
     { field: 'usage_limit', label: t('usage_limit'), icon: 'fa-hashtag' },
     { field: 'created_at', label: t('created_at'), icon: 'fa-calendar' },
     { field: 'updated_at', label: t('updated_at'), icon: 'fa-calendar' },
@@ -51,6 +52,7 @@ export default function DiscountTable({ discounts, onEdit }) {
   const sortOptions = [
     { field: 'code', label: t('discount_code') },
     { field: 'percent', label: t('discount_percent') },
+    { field: 'number_of_books', label: t('number_of_books') },
     { field: 'usage_limit', label: t('usage_limit') },
     { field: 'created_at', label: t('created_at') },
     { field: 'updated_at', label: t('updated_at') }
@@ -74,6 +76,14 @@ export default function DiscountTable({ discounts, onEdit }) {
           <i className="fa-solid fa-percent text-orange-500"></i>
           <span className="text-sm font-medium text-neutral-900 dark:text-neutral-100">
             {discount.percent}%
+          </span>
+        </div>
+      </td>
+      <td className="px-3 py-4 whitespace-nowrap">
+        <div className="flex items-center gap-2">
+          <i className="fa-solid fa-book text-purple-500"></i>
+          <span className="text-sm font-medium text-neutral-900 dark:text-neutral-100">
+            {discount.number_of_books ? discount.number_of_books : '-'}
           </span>
         </div>
       </td>

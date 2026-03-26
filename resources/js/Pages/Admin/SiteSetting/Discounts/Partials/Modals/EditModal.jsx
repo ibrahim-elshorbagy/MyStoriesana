@@ -13,6 +13,7 @@ export default function EditModal({ isOpen, onClose, discount }) {
   const { data, setData, put, errors, reset, processing } = useForm({
     code: '',
     percent: '',
+    number_of_books: '',
     usage_limit: '',
   });
 
@@ -21,6 +22,7 @@ export default function EditModal({ isOpen, onClose, discount }) {
       setData({
         code: discount.code || '',
         percent: discount.percent || '',
+        number_of_books: discount.number_of_books || '',
         usage_limit: discount.usage_limit || '',
       });
     } else if (!isOpen) {
@@ -84,6 +86,23 @@ export default function EditModal({ isOpen, onClose, discount }) {
             step="0.01"
           />
           <InputError message={errors.percent} className="mt-2" />
+        </div>
+
+        {/* Number of Books */}
+        <div className="mb-4">
+          <InputLabel htmlFor="number_of_books" value={t('number_of_books')} />
+          <TextInput
+            id="number_of_books"
+            name="number_of_books"
+            type="number"
+            value={data.number_of_books}
+            className="mt-1 block w-full"
+            onChange={(e) => setData('number_of_books', e.target.value)}
+            icon="fa-book"
+            placeholder={t('enter_number_of_books')}
+            min="1"
+          />
+          <InputError message={errors.number_of_books} className="mt-2" />
         </div>
 
         {/* Usage Limit */}

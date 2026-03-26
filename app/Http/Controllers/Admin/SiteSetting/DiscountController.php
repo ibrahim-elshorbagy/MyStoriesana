@@ -13,7 +13,7 @@ class DiscountController extends Controller
   {
     $request->validate([
       'code' => ['nullable', 'string', 'max:255'],
-      'sort' => ['nullable', 'string', 'in:id,code,percent,usage_limit,created_at,updated_at'],
+      'sort' => ['nullable', 'string', 'in:id,code,percent,number_of_books,usage_limit,created_at,updated_at'],
       'direction' => ['nullable', 'string', 'in:asc,desc'],
       'per_page' => ['nullable', 'integer', 'min:1'],
     ]);
@@ -47,6 +47,7 @@ class DiscountController extends Controller
     $validated = $request->validate([
       'code' => ['required', 'string', 'max:255', 'unique:discounts,code'],
       'percent' => ['required', 'numeric', 'min:0', 'max:100'],
+      'number_of_books' => ['nullable', 'integer', 'min:1'],
       'usage_limit' => ['required', 'integer', 'min:1'],
     ]);
 
@@ -62,6 +63,7 @@ class DiscountController extends Controller
   {
     $validated = $request->validate([
       'code' => ['required', 'string', 'max:255', 'unique:discounts,code,' . $discount->id],
+      'number_of_books' => ['nullable', 'integer', 'min:1'],
       'percent' => ['required', 'numeric', 'min:0', 'max:100'],
       'usage_limit' => ['required', 'integer', 'min:1'],
     ]);

@@ -484,6 +484,12 @@ $main = [
   'discount_validation_error' => 'خطأ في التحقق من رمز الخصم',
   'discount_value' => 'قيمة الخصم',
   'discount_applied' => 'تم تطبيق الخصم',
+  'number_of_books' => 'عدد الكتب',
+  'enter_number_of_books' => 'أدخل الحد الأدنى لعدد الكتب',
+  'discount_percent' => 'نسبة الخصم',
+  'enter_discount_percent' => 'أدخل نسبة الخصم',
+  'usage_limit' => 'حد الاستخدام',
+  'enter_usage_limit' => 'أدخل حد الاستخدام',
 
 ];
 

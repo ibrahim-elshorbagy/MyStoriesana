@@ -509,6 +509,12 @@ $main = [
   'remove_discount' => 'Remove discount',
   'discount_code_required' => 'Please enter a discount code',
   'discount_validation_error' => 'There was an error validating the discount code',
+  'number_of_books' => 'Number of Books',
+  'enter_number_of_books' => 'Enter minimum number of books',
+  'discount_percent' => 'Discount Percent',
+  'enter_discount_percent' => 'Enter discount percentage',
+  'usage_limit' => 'Usage Limit',
+  'enter_usage_limit' => 'Enter usage limit',
 
 ];
 

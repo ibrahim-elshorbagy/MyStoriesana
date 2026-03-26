@@ -12,6 +12,7 @@ export default function CreateModal({ isOpen, onClose }) {
   const { data, setData, post, errors, reset, processing } = useForm({
     code: '',
     percent: '',
+    number_of_books: '',
     usage_limit: '',
   });
 
@@ -70,6 +71,23 @@ export default function CreateModal({ isOpen, onClose }) {
             required
           />
           <InputError message={errors.percent} className="mt-2" />
+        </div>
+
+        {/* Number of Books */}
+        <div className="mb-4">
+          <InputLabel htmlFor="number_of_books" value={t('number_of_books')} />
+          <TextInput
+            id="number_of_books"
+            type="number"
+            name="number_of_books"
+            value={data.number_of_books}
+            className="mt-1 block w-full"
+            onChange={(e) => setData('number_of_books', e.target.value)}
+            icon="fa-book"
+            placeholder={t('enter_number_of_books')}
+            min="1"
+          />
+          <InputError message={errors.number_of_books} className="mt-2" />
         </div>
 
         {/* Usage Limit */}
