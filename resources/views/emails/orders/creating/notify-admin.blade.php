@@ -20,11 +20,11 @@
       <strong style="color:#333;">{{ __('emails.notify_admin_stories_count_label', [], $locale) }}:</strong>
       {{ $order->orderItems->count() }}<br />
       <strong style="color:#333;">{{ __('emails.notify_admin_subtotal_label', [], $locale) }}:</strong>
-      {{ number_format((float) $order->subtotal, 2) }} EUR<br />
+      {{ number_format((float) $order->subtotal, 2) }} EGP<br />
       <strong style="color:#333;">{{ __('emails.notify_admin_discount_label', [], $locale) }}:</strong>
-      -{{ number_format((float) $order->discount_value, 2) }} EUR<br />
+      -{{ number_format((float) $order->discount_value, 2) }} EGP<br />
       <strong style="color:#333;">{{ __('emails.notify_admin_total_label', [], $locale) }}:</strong>
-      {{ number_format((float) $order->total_price, 2) }} EUR<br />
+      {{ number_format((float) $order->total_price, 2) }} EGP<br />
       <strong style="color:#333;">{{ __('emails.notify_admin_payment_method_label', [], $locale) }}:</strong>
       {{ __('emails.payment_method_' . $order->payment_method, [], $locale) }}<br />
       <strong style="color:#333;">{{ __('emails.notify_admin_order_status_label', [], $locale) }}:</strong>
@@ -48,7 +48,7 @@
           <strong>{{ __('emails.notify_admin_story_format_label', [], $locale) }}:</strong>
           {{ __('emails.plan_' . $item->format, [], $locale) }}<br />
           <strong>{{ __('emails.notify_admin_story_price_label', [], $locale) }}:</strong>
-          {{ number_format((float) $item->story_price, 2) }} EUR
+          {{ number_format((float) $item->story_price, 2) }} EGP
         </div>
       @endforeach
     </div>

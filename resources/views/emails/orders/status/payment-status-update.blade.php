@@ -22,7 +22,7 @@
       <strong style="color:#333;">{{ __('emails.payment_status_mail_method_label', [], $locale) }}:</strong>
       {{ __('emails.payment_method_' . $payment->payment_method, [], $locale) }}<br />
       <strong style="color:#333;">{{ __('emails.payment_status_mail_amount_label', [], $locale) }}:</strong>
-      {{ number_format((float) $payment->amount, 2) }} EUR<br />
+      {{ number_format((float) $payment->amount, 2) }} EGP<br />
       <strong style="color:#333;">{{ __('emails.payment_status_mail_status_label', [], $locale) }}:</strong>
       {{ __('emails.payment_status_' . $payment->status, [], $locale) }}
     </div>

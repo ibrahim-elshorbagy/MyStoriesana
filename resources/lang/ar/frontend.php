@@ -425,7 +425,7 @@ return [
 
   /* Footer */
   'MyStoryana_description' => 'نحو تحويل أفكارك إلى قصص لا تُنسى. بسرعة، بصوت بشري، وبأسلوب رائع.',
-  'footer_logo_alt' => 'شعار ماي ستوريز آي',
+  'footer_logo_alt' => 'MyStoryana',
   'footer_tagline_line1' => 'نحو تحويل أفكارك إلى',
   'footer_tagline_line2' => 'قصص لا تُنسى.',
   'footer_sections_title' => 'الأقسام',
@@ -436,7 +436,7 @@ return [
   'footer_contact_email_title' => 'دعم البريد الإلكتروني',
   'footer_contact_phone_title' => 'دعم الهاتف',
   'footer_rights_reserved' => 'جميع الحقوق محفوظة',
-  'footer_copyright_text' => 'ماي ستوريز آي :year',
+  'footer_copyright_text' => 'MyStoryana :year',
   'cookie_settings' => 'إعدادات الكوكيز',
 
   /* Error Pages */
@@ -729,6 +729,6 @@ return [
   'learning_value_required' => 'يرجى اختيار قيمة تعليمية واحدة على الأقل.',
   'child_image_required' => 'صورة الطفل مطلوبة.',
 
-  
+
 ];
 

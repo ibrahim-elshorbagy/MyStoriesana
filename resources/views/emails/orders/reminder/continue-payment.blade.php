@@ -19,7 +19,7 @@
       <strong style="color:#333;">{{ __('emails.continue_payment_reminder_created_at_label', [], $locale) }}:</strong>
       {{ $order->created_at->format('Y-m-d H:i') }}<br />
       <strong style="color:#333;">{{ __('emails.continue_payment_reminder_total_label', [], $locale) }}:</strong>
-      {{ number_format((float) $order->total_price, 2) }} EUR
+      {{ number_format((float) $order->total_price, 2) }} EGP
     </div>
 
     <p style="color:#2d5a2d; font-size:14px;">{{ __('emails.continue_payment_reminder_note', [], $locale) }}</p>

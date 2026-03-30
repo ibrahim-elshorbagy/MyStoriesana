@@ -156,7 +156,6 @@ class OrderController extends Controller
       'street' => ['required', 'string', 'max:255'],
       'house_number' => ['nullable', 'string', 'max:255'],
       'additional_info' => ['nullable', 'string', 'max:500'],
-      'postal_code' => ['required', 'string', 'max:255'],
       'city' => ['required', 'string', 'max:255'],
       'phone' => ['required', 'string', 'max:255'],
       'discount_code' => ['nullable', 'string', 'max:255'], // NEW
@@ -273,7 +272,6 @@ class OrderController extends Controller
           'street' => $validated['street'],
           'house_number' => $validated['house_number'],
           'additional_info' => $validated['additional_info'],
-          'postal_code' => $validated['postal_code'],
           'city' => $validated['city'],
           'phone' => $validated['phone'],
         ]);
@@ -399,7 +397,6 @@ class OrderController extends Controller
       'street' => ['required', 'string', 'max:255'],
       'house_number' => ['nullable', 'string', 'max:255'],
       'additional_info' => ['nullable', 'string', 'max:500'],
-      'postal_code' => ['required', 'string', 'max:255'],
       'city' => ['required', 'string', 'max:255'],
       'phone' => ['required', 'string', 'max:255'],
       'discount_code' => ['nullable', 'string', 'max:255'], // ✅ Removed 'exists' rule - we'll validate manually
@@ -503,7 +500,6 @@ class OrderController extends Controller
           'street' => $validated['street'],
           'house_number' => $validated['house_number'],
           'additional_info' => $validated['additional_info'],
-          'postal_code' => $validated['postal_code'],
           'city' => $validated['city'],
           'phone' => $validated['phone'],
         ];

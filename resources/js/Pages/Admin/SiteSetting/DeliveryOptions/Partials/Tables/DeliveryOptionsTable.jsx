@@ -68,7 +68,7 @@ export default function DeliveryOptionsTable({ deliveryOptions, onEdit }) {
         </div>
       </td>
       <td className="px-3 py-4 whitespace-nowrap text-sm text-neutral-900 dark:text-neutral-100">
-        {option.price} EUR
+        {option.price} EGP
       </td>
       <td className="px-6 py-4 whitespace-nowrap text-sm text-neutral-500 dark:text-neutral-400">
         {new Date(option.created_at).toLocaleDateString()}

@@ -100,22 +100,6 @@ export default function ShippingForm({
 
         <div>
           <label className="block text-sm font-medium text-neutral-700 mb-2">
-            {t('postal_code')} *
-          </label>
-          <input
-            type="text"
-            name="postal_code"
-            value={shippingData.postal_code}
-            onChange={(e) => setShippingData({ ...shippingData, postal_code: e.target.value })}
-            className="w-full px-4 py-3 border-2 border-neutral-300 rounded-xl focus:border-orange-500 focus:ring-2 focus:ring-orange-200 transition-all duration-200"
-            placeholder={t('postal_code_placeholder') || t('postal_code')}
-            required={needsShipping}
-          />
-          {errors.postal_code && <span className="text-red-500 text-sm mt-1 block">{errors.postal_code}</span>}
-        </div>
-
-        <div>
-          <label className="block text-sm font-medium text-neutral-700 mb-2">
             {t('city')} *
           </label>
           <input
