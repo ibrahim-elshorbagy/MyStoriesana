@@ -435,6 +435,8 @@ return [
   'footer_contact_title' => 'تواصل معنا',
   'footer_contact_email_title' => 'دعم البريد الإلكتروني',
   'footer_contact_phone_title' => 'دعم الهاتف',
+  'footer_contact_egypt_phone_title' => 'الهاتف',
+  'footer_contact_address_title' => 'العنوان',
   'footer_rights_reserved' => 'جميع الحقوق محفوظة',
   'footer_copyright_text' => 'MyStoryana :year',
   'cookie_settings' => 'إعدادات الكوكيز',

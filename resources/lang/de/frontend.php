@@ -395,6 +395,8 @@ return [
   'footer_contact_title' => 'Kontakt',
   'footer_contact_email_title' => 'E-Mail-Support',
   'footer_contact_phone_title' => 'Telefon-Support',
+  'footer_contact_egypt_phone_title' => 'Telefon',
+  'footer_contact_address_title' => 'Adresse',
   'footer_rights_reserved' => 'Alle Rechte vorbehalten',
   'footer_copyright_text' => 'MyStoryana :year',
 
