@@ -222,7 +222,6 @@ export default function Footer() {
                   <i className="fa-solid fa-phone p-2"></i>
                 </div>
                 <div className={`flex-1 space-y-1 rtl:text-right`}>
-                  <div className="font-medium text-neutral-900">Egypt Phone</div>
                   <a
                     href={`tel:+20${EgyptPhone.slice(1)}`}
                     className="block text-neutral-600 underline decoration-orange-600 underline-offset-4 hover:text-orange-600 transition-colors duration-300 hover:underline"
@@ -238,7 +237,6 @@ export default function Footer() {
                   <i className="fa-solid fa-location-dot p-2"></i>
                 </div>
                 <div className={`flex-1 space-y-1 rtl:text-right`}>
-                  <div className="font-medium text-neutral-900">Address</div>
                   <p className="block text-neutral-600" dir="ltr">{EgyptAddress}</p>
                 </div>
               </li>
