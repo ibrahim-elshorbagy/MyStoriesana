@@ -13,7 +13,7 @@ export default function ShippingForm({
 
   const deliveryOptionChoices = deliveryOptions.map(option => ({
     value: option.id,
-    label: `${option.city_value} - €${option.price}`
+    label: `${option.city_value} - جنيه ${option.price}`
   }));
 
   return (

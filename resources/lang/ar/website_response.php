@@ -267,6 +267,9 @@ return [
   'payment_error_title' => 'خطأ في الدفع',
   'payment_already_initiated_title' => 'تم بدء الدفع بالفعل',
   'payment_already_initiated' => 'تم بدء الدفع لهذا الطلب بالفعل.',
+  'paymob_payment_initiated' => 'جاري تحويلك إلى باي موب لإتمام عملية الدفع.',
+  'paymob_payment_failed' => 'فشلت عملية الدفع عبر باي موب. يرجى المحاولة مرة أخرى.',
+  'paymob_phone_required' => 'مطلوب رقم هاتف لعمليات الدفع عبر باي موب. الرجاء إضافة رقم هاتف في عنوان الشحن أو حسابك.',
 
   // Cart Responses
   'item_added_to_cart_title' => 'تمت إضافة العنصر للسلة',

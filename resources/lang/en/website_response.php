@@ -264,6 +264,9 @@ return [
   'payment_error_title' => 'Payment Error',
   'payment_already_initiated_title' => 'Payment Already Initiated',
   'payment_already_initiated' => 'Payment for this order has already been initiated.',
+  'paymob_payment_initiated' => 'You are being redirected to Paymob to complete your payment.',
+  'paymob_payment_failed' => 'Paymob payment failed. Please try again.',
+  'paymob_phone_required' => 'A phone number is required for Paymob payments. Please add a phone number to your shipping address or account.',
 
   // Cart Responses
   'item_added_to_cart_title' => 'Item Added to Cart',

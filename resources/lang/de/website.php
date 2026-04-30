@@ -440,13 +440,14 @@ $main= [
   'admin_email_help' => 'Diese E-Mail erhält automatisch Benachrichtigungen über neue Bestellungen und wichtige Ereignisse',
 
 
-  // Stripe Settings
-  'stripe_settings' => 'Stripe-Einstellungen',
-  'stripe_settings_description' => 'Stripe-Zahlungseinstellungen konfigurieren',
-  'stripe_publishable_key' => 'Stripe Publishable Key',
-  'stripe_publishable_key_help' => 'Ihr Publishable Key für clientseitige Vorgänge',
-  'stripe_secret_key' => 'Stripe Secret Key',
-  'stripe_secret_key_help' => 'Ihr Secret Key für serverseitige Vorgänge',
+  // Paymob Settings
+  'paymob_settings' => 'Paymob-Einstellungen',
+  'paymob_settings_description' => 'Konfigurieren Sie Ihren Paymob-API-Schlüssel.',
+  'paymob_api_key' => 'Paymob API-Schlüssel',
+  'paymob_api_key_help' => 'Ihren API-Schlüssel finden Sie im Paymob-Dashboard unter Einstellungen.',
+  'paymob_callback_urls' => 'Callback-URLs',
+  'success_url' => 'Transaction processed callback',
+  'failure_url' => 'Transaction response callback',
 
   // Customer Feedback
   'customer_feedbacks' => 'Kundenfeedbacks',

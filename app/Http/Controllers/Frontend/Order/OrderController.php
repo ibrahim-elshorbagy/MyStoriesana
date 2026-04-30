@@ -13,7 +13,7 @@ use App\Http\Controllers\Frontend\Cart\CartController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
-use App\Services\StripeService;
+use App\Services\PaymobService;
 use App\Http\Resources\Order\OrderResource;
 use App\Models\Admin\SiteSetting\Discount;
 use App\Models\Admin\SiteSetting\DiscountUsage;
@@ -27,7 +27,7 @@ use App\Notifications\Orders\Status\PaymentStatusUpdate;
 
 class OrderController extends Controller
 {
-  protected $stripeService;
+  protected $paymobService;
 
   private function resolveOrderLocale(Order $order): string
   {
@@ -40,9 +40,9 @@ class OrderController extends Controller
     };
   }
 
-  public function __construct(StripeService $stripeService)
+  public function __construct(PaymobService $paymobService)
   {
-    $this->stripeService = $stripeService;
+    $this->paymobService = $paymobService;
   }
 
   // Show the multi-step form
@@ -149,7 +149,7 @@ class OrderController extends Controller
 
     // Build validation rules - shipping is always required for all plans
     $rules = [
-      'payment_method' => ['required', 'in:stripe'],
+      'payment_method' => ['required', 'in:paymob'],
       'delivery_option_id' => ['required', 'exists:delivery_options,id'],
       'first_name' => ['required', 'string', 'max:255'],
       'last_name' => ['required', 'string', 'max:255'],
@@ -337,7 +337,7 @@ class OrderController extends Controller
         // Update all order items status to processing
         $order->orderItems()->update(['status' => 'processing']);
 
-        // Record discount usage immediately since no Stripe payment
+        // Record discount usage immediately since no Paymob payment
         if ($discountId) {
           $discount = Discount::find($discountId);
           if ($discount) {
@@ -365,8 +365,8 @@ class OrderController extends Controller
         ]);
       }
 
-      // Process payment via Stripe
-      return $this->initiateStripePayment($order, $payment);
+      // Process payment via Paymob
+      return $this->initiatePaymobPayment($order, $payment);
     } catch (\Exception $e) {
       DB::rollBack();
 
@@ -390,7 +390,7 @@ class OrderController extends Controller
 
     // Build validation rules - shipping is always required for all plans
     $rules = [
-      'payment_method' => ['required', 'in:stripe'],
+      'payment_method' => ['required', 'in:paymob'],
       'delivery_option_id' => ['required', 'exists:delivery_options,id'],
       'first_name' => ['required', 'string', 'max:255'],
       'last_name' => ['required', 'string', 'max:255'],
@@ -556,7 +556,7 @@ class OrderController extends Controller
         // Update all order items status to processing
         $order->orderItems()->update(['status' => 'processing']);
 
-        // Record discount usage immediately since no Stripe payment
+        // Record discount usage immediately since no Paymob payment
         if ($discountId) {
           $discount = Discount::find($discountId);
           if ($discount) {
@@ -584,8 +584,8 @@ class OrderController extends Controller
         ]);
       }
 
-      // Process payment via Stripe
-      return $this->initiateStripePayment($order, $payment);
+      // Process payment via Paymob
+      return $this->initiatePaymobPayment($order, $payment);
     } catch (\Exception $e) {
       DB::rollBack();
 
@@ -598,13 +598,13 @@ class OrderController extends Controller
 
 
   /**
-   * Helper method to initiate Stripe payment
+   * Helper method to initiate Paymob payment
    * Used by both processPayment and processExistingOrderPayment
    */
-  private function initiateStripePayment(Order $order, Payment $payment)
+  private function initiatePaymobPayment(Order $order, Payment $payment)
   {
     try {
-      $result = $this->stripeService->sendPayment($order);
+      $result = $this->paymobService->sendPayment($order);
 
       if (!$result['status']) {
         return redirect()->route('home')
@@ -613,10 +613,10 @@ class OrderController extends Controller
           ->with('status', 'error');
       }
 
-      // Update payment with Stripe session ID
-      $payment->update(['transaction_id' => $result['stripe_session_id']]);
+      // Update payment with Paymob order ID
+      $payment->update(['transaction_id' => $result['paymob_order_id']]);
 
-      // Redirect to Stripe checkout
+      // Redirect to Paymob checkout
       return redirect($result['url']);
     } catch (\Exception $e) {
 

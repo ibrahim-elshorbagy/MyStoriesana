@@ -95,7 +95,6 @@ export default function PaymobSettings({ settings, paymobUrls = {} }) {
               <InputError message={errors['settings.paymob_api_key']} className="mt-2" />
             </div>
 
-
             {/* Mobile Wallet ID */}
             <div className="md:col-span-2">
               <InputLabel value={t('paymob_mobile_wallet_id')} />

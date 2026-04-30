@@ -26,8 +26,8 @@ class SiteSettingsController extends Controller
 
     // Paymob callback URLs
     $paymobUrls = [
-      'success_url' => url(route('frontend.payment.success')),
-      'failure_url' => url(route('frontend.payment.failed')),
+      'success_url' => url(route('frontend.payment.paymob.processed')),
+      'failure_url' => url(route('frontend.payment.paymob.response')),
     ];
 
     return inertia('Admin/SiteSetting/Site/SiteSettings', [

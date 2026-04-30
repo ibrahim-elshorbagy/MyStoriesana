@@ -407,13 +407,14 @@ $main = [
   'enter_admin_email' => 'Enter the admin email address',
   'admin_email_help' => 'This email will receive notifications about new orders and important updates',
 
-  // Stripe Settings
-  'stripe_settings' => 'Stripe Settings',
-  'stripe_settings_description' => 'Configure your Stripe payment gateway',
-  'stripe_publishable_key' => 'Stripe Publishable Key',
-  'stripe_publishable_key_help' => 'Used on the website for secure payments',
-  'stripe_secret_key' => 'Stripe Secret Key',
-  'stripe_secret_key_help' => 'Keep this key private (server-side)',
+  // Paymob Settings
+  'paymob_settings' => 'Paymob Settings',
+  'paymob_settings_description' => 'Configure your Paymob payment gateway API key.',
+  'paymob_api_key' => 'Paymob API Key',
+  'paymob_api_key_help' => 'Find your API key in Paymob dashboard under Settings.',
+  'paymob_callback_urls' => 'Callback URLs',
+  'success_url' => 'Transaction processed callback',
+  'failure_url' => 'Transaction response callback',
 
   // Customer Feedback
   'customer_feedbacks' => 'Customer Testimonials',

@@ -425,14 +425,16 @@ $main = [
   "success_url"=>"Success URL",
   "failure_url"=>"Failure URL",
 
-  // Stripe Settings
-  'stripe_settings' => 'إعدادات Stripe',
-  'stripe_settings_description' => 'تكوين إعدادات بوابة الدفع Stripe',
-  'stripe_publishable_key' => 'Stripe-Publishable-Key',
-  'stripe_publishable_key_help' => 'مفتاح Stripe-Publishable-Key العام للعمليات من جانب العميل',
-  'stripe_secret_key' => 'Stripe-Secret-Key',
-  'stripe_secret_key_help' => 'مفتاح Stripe-Secret-Key السري للعمليات من جانب الخادم',
-  'customer_testimonials' => 'آراء العملاء',
+  // Paymob Settings
+  'paymob_settings' => 'إعدادات باي موب',
+  'paymob_settings_description' => 'قم بإعداد مفتاح API الخاص ببوابة الدفع باي موب.',
+  'paymob_api_key' => 'مفتاح API لباي موب',
+  'paymob_api_key_help' => 'يمكنك العثور على مفتاح API في لوحة تحكم باي موب تحت الإعدادات.',
+  'paymob_callback_urls' => 'روابط الاستجابة',
+  'success_url' => 'Transaction processed callback',
+  'failure_url' => 'Transaction response callback',
+
+  // Customer testimonials
   'customer_images' => 'صور العملاء',
   'customer_videos' => 'فيديوهات العملاء',
 

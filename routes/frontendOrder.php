@@ -29,8 +29,8 @@ Route::middleware(['auth', 'role:user'])->group(function () {
   Route::post('/orders/{order}/process-payment', [OrderController::class, 'processExistingOrderPayment'])->name('frontend.order.processPayment.old');
 
   // Payment gateway callback routes
-  Route::get('/payment/paymob/success/{order?}', [PaymobController::class, 'success'])->name('frontend.payment.success');
-  Route::get('/payment/paymob/failed/{order?}', [PaymobController::class, 'failure'])->name('frontend.payment.failed');
+  Route::get('/payment/paymob/processed', [PaymobController::class, 'processed'])->name('frontend.payment.paymob.processed');
+  Route::get('/payment/paymob/response', [PaymobController::class, 'response'])->name('frontend.payment.paymob.response');
   Route::get('/payment/stripe/success/{order}', [StripeController::class, 'success'])->name('frontend.stripe.payment.success');
   Route::get('/payment/stripe/failed/{order}', [StripeController::class, 'failure'])->name('frontend.stripe.payment.failed');
 });

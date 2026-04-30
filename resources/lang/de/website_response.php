@@ -286,6 +286,9 @@ return [
   'payment_error_title' => 'Zahlungsfehler',
   'payment_already_initiated_title' => 'Zahlung bereits eingeleitet',
   'payment_already_initiated' => 'Die Zahlung für diese Bestellung wurde bereits eingeleitet.',
+  'paymob_payment_initiated' => 'Sie werden zu Paymob weitergeleitet, um Ihre Zahlung abzuschließen.',
+  'paymob_payment_failed' => 'Paymob-Zahlung fehlgeschlagen. Bitte versuchen Sie es erneut.',
+  'paymob_phone_required' => 'Für Paymob-Zahlungen ist eine Telefonnummer erforderlich. Bitte fügen Sie eine Telefonnummer zu Ihrer Versandadresse oder Ihrem Konto hinzu.',
 
   // Cart Responses
   'item_added_to_cart_title' => 'Artikel zum Warenkorb hinzugefügt',

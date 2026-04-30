@@ -14,7 +14,7 @@ export default function OrdersTable({ orders }) {
     { field: 'items', label: t('items'), icon: 'fa-box-open' },  // ⚠️ CHANGED
     { field: 'user_name', label: t('customer'), icon: 'fa-user' },
     { field: 'status', label: t('status'), icon: 'fa-info-circle' },
-    { field: 'total_price', label: t('total_price'), icon: 'fa-euro-sign' },
+    { field: 'total_price', label: t('total_price'), icon: 'fa-money-bill' },
     { field: 'created_at', label: t('created_at'), icon: 'fa-calendar' },
     { field: 'actions', label: t('actions'), icon: 'fa-gear', className: 'flex justify-center' }
   ];

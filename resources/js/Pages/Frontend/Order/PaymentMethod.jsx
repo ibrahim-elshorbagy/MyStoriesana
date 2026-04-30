@@ -8,7 +8,7 @@ import axios from 'axios';
 export default function PaymentMethod({ cart, order, deliveryOptions = [] }) {
   const { t } = useTrans();
   const { errors, csrf_token } = usePage().props;
-  const [paymentMethod, setPaymentMethod] = useState('stripe');
+  const [paymentMethod, setPaymentMethod] = useState('paymob');
   const [shippingData, setShippingData] = useState(() => {
     // Pre-populate shipping data from existing order if available
     if (order?.shipping_address) {
@@ -542,17 +542,17 @@ export default function PaymentMethod({ cart, order, deliveryOptions = [] }) {
                       <input
                         type="radio"
                         name="payment_method"
-                        value="stripe"
-                        checked={paymentMethod === 'stripe'}
-                        onChange={() => setPaymentMethod('stripe')}
-                        className="mt-1 ltr:mr-3 rtl:ml-3 w-5 h-5 text-orange-500"
-                      />
-                      <div className="flex-1">
-                        <div className="flex items-center gap-3 mb-2">
-                          <i className="fa-solid fa-credit-card text-xl text-blue-600"></i>
-                          <h4 className="font-bold text-neutral-900">{t('payment_stripe')}</h4>
-                        </div>
-                        <p className="text-sm text-neutral-600">{t('payment_stripe_desc')}</p>
+                      value="paymob"
+                      checked={paymentMethod === 'paymob'}
+                      onChange={() => setPaymentMethod('paymob')}
+                      className="mt-1 ltr:mr-3 rtl:ml-3 w-5 h-5 text-orange-500"
+                    />
+                    <div className="flex-1">
+                      <div className="flex items-center gap-3 mb-2">
+                        <i className="fa-solid fa-credit-card text-xl text-blue-600"></i>
+                        <h4 className="font-bold text-neutral-900">{t('payment_method_paymob')}</h4>
+                      </div>
+                      <p className="text-sm text-neutral-600">{t('payment_method_paymob_desc')}</p>
                       </div>
                     </div>
                   </div>

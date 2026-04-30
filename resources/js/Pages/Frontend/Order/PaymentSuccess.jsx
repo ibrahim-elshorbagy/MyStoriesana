@@ -40,7 +40,7 @@ export default function PaymentSuccess({ order, payment }) {
                   </div>
                   <div className="flex justify-between">
                     <dt className="text-sm font-medium text-gray-500">{t('payment_method')}:</dt>
-                    <dd className="text-sm text-gray-900">Stripe</dd>
+                    <dd className="text-sm text-gray-900">Paymob</dd>
                   </div>
                   {payment && (
                     <div className="flex justify-between">
