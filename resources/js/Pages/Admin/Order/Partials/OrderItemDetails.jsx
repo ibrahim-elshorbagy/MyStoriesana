@@ -7,6 +7,12 @@ export default function OrderItemDetails({ item, t }) {
     third_plan: t('format_third_plan') || 'Hardcover Book',
   };
 
+  const languageOptions = {
+    arabic: t('language_arabic'),
+    english: t('language_english'),
+    arabic_english: t('language_arabic_english'),
+  };
+
   const storyThemeLabels = {
     1: t('story_theme_1'),
     2: t('story_theme_2'),
@@ -107,7 +113,7 @@ export default function OrderItemDetails({ item, t }) {
         </div>
         <div className="flex justify-between">
           <span className="text-neutral-600 dark:text-neutral-400">{t('language')}:</span>
-          <span className="font-semibold text-neutral-900 dark:text-neutral-100">{t(item.language)}</span>
+          <span className="font-semibold text-neutral-900 dark:text-neutral-100">{languageOptions[item.language] || item.language}</span>
         </div>
       </div>
 

@@ -217,21 +217,7 @@ export default function Footer() {
               {t('footer_contact_title')}
             </h4>
             <ul className="space-y-5">
-              <li className="group flex items-start gap-4">
-                <div className="p-2 rounded-lg bg-white text-neutral-600 transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg">
-                  <i className="fa-solid fa-phone p-2"></i>
-                </div>
-                <div className={`flex-1 space-y-1 rtl:text-right`}>
-                  <div className="font-medium text-neutral-900">{t('footer_contact_phone_title')}</div>
-                  <a
-                    href={`tel:+20${EgyptPhone.slice(1)}`}
-                    className="block text-neutral-600 underline decoration-orange-600 underline-offset-4 hover:text-orange-600 transition-colors duration-300 hover:underline"
-                    dir="ltr"
-                  >
-                    {EgyptPhone}
-                  </a>
-                </div>
-              </li>
+              
 
               <li className="group flex items-start gap-4">
                 <div className="p-2 rounded-lg bg-white text-neutral-600 transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg">

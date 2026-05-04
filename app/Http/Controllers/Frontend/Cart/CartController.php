@@ -29,7 +29,7 @@ class CartController extends Controller
             'face_swap_result' => ['nullable', 'string'],
             'child_name' => ['required', 'string', 'max:255'],
             'child_age' => ['required', 'integer', 'min:1'],
-            'language' => ['required', 'string', 'in:arabic,english,german,turkish,english_german,arabic_german,turkish_german'],
+            'language' => ['required', 'string', 'in:arabic,english,arabic_english'],
             'child_gender' => ['required', 'string', 'in:boy,girl'],
             'format' => ['required', 'string', 'in:first_plan,second_plan,third_plan'],
             'story_theme' => ['nullable', 'integer', 'min:1', 'max:10'],

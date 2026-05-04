@@ -101,6 +101,12 @@ export default function PaymentMethod({ cart, order, deliveryOptions = [] }) {
     10: t('story_theme_10'),
   };
 
+  const languageOptions = {
+    arabic: t('language_arabic'),
+    english: t('language_english'),
+    arabic_english: t('language_arabic_english'),
+  };
+
   const handleApplyDiscount = async (e) => {
     e.preventDefault();
 
@@ -245,7 +251,7 @@ export default function PaymentMethod({ cart, order, deliveryOptions = [] }) {
                                 </span>
                                 <span className="flex items-center gap-1">
                                   <i className="fa-solid fa-language text-purple-500"></i>
-                                  {t(item.language)}
+                                  {languageOptions[item.language] || item.language}
                                 </span>
                               </div>
                             </div>

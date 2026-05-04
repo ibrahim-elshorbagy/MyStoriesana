@@ -34,7 +34,7 @@ class OrderController extends Controller
     $itemLanguage = $order->orderItems()->value('language');
 
     return match ($itemLanguage) {
-      'arabic', 'ar' => 'ar',
+      'arabic', 'ar', 'arabic_english' => 'ar',
       'german', 'de', 'deutsch' => 'de',
       default => 'en',
     };

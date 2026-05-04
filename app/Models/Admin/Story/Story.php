@@ -137,6 +137,6 @@ class Story extends Model
     if ($this->gender === null) {
       return '';
     }
-    return $this->gender === 0 ? __('website.boy') : __('website.girl');
+    return $this->gender == 0 ? __('website.boy') : __('website.girl');
   }
 }
