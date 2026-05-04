@@ -6,7 +6,7 @@
 
 <div style="font-family: Arial, sans-serif; background-color:#f9f9f9; padding:10px; text-align:center;">
   <img src="{{ asset('assets/auth/logo.webp') }}" alt="MyStoryana Logo" width="150"
-    style="margin:0 auto 20px auto; width:100%; max-width:400px;" />
+    style="margin:0 auto 20px auto; width:100%; max-width:200px;" />
 
   <div
     style="max-width:600px; margin:0 auto; background:#fff; padding:20px; border-radius:12px; box-shadow:0 2px 6px rgba(0,0,0,0.1); text-align:{{ $isRtl ? 'right' : 'left' }};"
