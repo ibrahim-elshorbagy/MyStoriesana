@@ -4,7 +4,7 @@ const Accordion = ({ title, children, isOpen: externalIsOpen, onToggle ,classNam
   const [internalIsOpen, setInternalIsOpen] = useState(false);
 
   // Use external state if provided, otherwise use internal state
-  const isOpen = externalIsOpen !== undefined ? externalIsOpen : internalIsOpen;
+  const isOpen = externalIsOpen != undefined ? externalIsOpen : internalIsOpen;
   const handleToggle = onToggle || (() => setInternalIsOpen(!internalIsOpen));
 
   return (

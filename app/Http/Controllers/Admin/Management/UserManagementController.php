@@ -152,7 +152,7 @@ class UserManagementController extends Controller
   public function destroy(Request $request, User $user)
   {
     // Don't allow deleting self
-    if ($user->id === $request->user()->id) {
+    if ($user->id == $request->user()->id) {
       return back()
         ->with('title', __('website_response.user_delete_error_title'))
         ->with('message', __('website_response.user_delete_error_self_message'))

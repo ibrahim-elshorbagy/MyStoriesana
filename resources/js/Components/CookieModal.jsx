@@ -16,9 +16,9 @@ export default function CookieModal() {
     const cookieChoice = localStorage.getItem('cookie_consent');
     if (!cookieChoice) {
       // Get the appropriate message based on language
-      const message = locale === 'ar'
+      const message = locale == 'ar'
         ? (cookie_data?.cookie_message_ar || t('default_cookie_message'))
-        : locale === 'de'
+        : locale == 'de'
         ? (cookie_data?.cookie_message_de || t('default_cookie_message'))
         : (cookie_data?.cookie_message_en || t('default_cookie_message'));
 

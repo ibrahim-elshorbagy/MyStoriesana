@@ -45,15 +45,15 @@ const Content = ({
 
     let alignmentClasses = 'origin-top';
 
-    if (align === 'left') {
+    if (align == 'left') {
         alignmentClasses = 'ltr:origin-top-left rtl:origin-top-right start-0';
-    } else if (align === 'right') {
+    } else if (align == 'right') {
         alignmentClasses = 'ltr:origin-top-right rtl:origin-top-left end-0';
     }
 
     let widthClasses = '';
 
-    if (width === '48') {
+    if (width == '48') {
         widthClasses = 'w-48';
     }
 

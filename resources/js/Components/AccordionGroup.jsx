@@ -4,7 +4,7 @@ const AccordionGroup = ({ children }) => {
   const [openAccordion, setOpenAccordion] = useState(null);
 
   const handleAccordionToggle = (index) => {
-    setOpenAccordion(openAccordion === index ? null : index);
+    setOpenAccordion(openAccordion == index ? null : index);
   };
 
   return (
@@ -12,7 +12,7 @@ const AccordionGroup = ({ children }) => {
       {React.Children.map(children, (child, index) => {
         if (React.isValidElement(child)) {
           return React.cloneElement(child, {
-            isOpen: openAccordion === index,
+            isOpen: openAccordion == index,
             onToggle: () => handleAccordionToggle(index),
             key: index
           });

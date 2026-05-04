@@ -2,7 +2,7 @@ import { Link } from '@inertiajs/react';
 
 export default function ContinuePaymentButton({ order, t }) {
   // Check if payment is incomplete
-  const hasUnpaidPayment = !order.payments?.some(p => p.status === 'paid');
+  const hasUnpaidPayment = !order.payments?.some(p => p.status == 'paid');
 
   if (!hasUnpaidPayment) return null;
 

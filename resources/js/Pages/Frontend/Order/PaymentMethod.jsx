@@ -206,7 +206,7 @@ export default function PaymentMethod({ cart, order, deliveryOptions = [] }) {
               <div className="bg-white/90 backdrop-blur-sm rounded-3xl shadow-2xl p-3 max-sm:py-8 sm:p-8 border border-white/40">
                 <h2 className="text-2xl font-bold text-neutral-900 mb-6 flex items-center gap-3">
                   <i className="fa-solid fa-box-open text-orange-500"></i>
-                  {t('your_order')} ({totalItems} {totalItems === 1 ? t('item') : t('items')})
+                  {t('your_order')} ({totalItems} {totalItems == 1 ? t('item') : t('items')})
                 </h2>
 
                 <div className="space-y-6">
@@ -246,7 +246,7 @@ export default function PaymentMethod({ cart, order, deliveryOptions = [] }) {
                                   {item.child_age} {t('years')}
                                 </span>
                                 <span className="flex items-center gap-1">
-                                  <i className={`fa-solid ${item.child_gender === 'boy' ? 'fa-mars text-blue-500' : 'fa-venus text-pink-500'}`}></i>
+                                  <i className={`fa-solid ${item.child_gender == 'boy' ? 'fa-mars text-blue-500' : 'fa-venus text-pink-500'}`}></i>
                                   {t(item.child_gender)}
                                 </span>
                                 <span className="flex items-center gap-1">
@@ -549,7 +549,7 @@ export default function PaymentMethod({ cart, order, deliveryOptions = [] }) {
                         type="radio"
                         name="payment_method"
                       value="paymob"
-                      checked={paymentMethod === 'paymob'}
+                      checked={paymentMethod == 'paymob'}
                       onChange={() => setPaymentMethod('paymob')}
                       className="mt-1 ltr:mr-3 rtl:ml-3 w-5 h-5 text-orange-500"
                     />

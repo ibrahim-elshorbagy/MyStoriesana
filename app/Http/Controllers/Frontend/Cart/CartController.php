@@ -132,7 +132,7 @@ class CartController extends Controller
     public function showCartItem(CartItem $cartItem)
     {
         // Ensure the cart item belongs to the authenticated user
-        if ($cartItem->cart->user_id !== Auth::id()) {
+        if ($cartItem->cart->user_id != Auth::id()) {
             abort(403);
         }
 

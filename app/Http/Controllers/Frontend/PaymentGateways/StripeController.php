@@ -34,7 +34,7 @@ class StripeController extends Controller
     ]);
 
     // Verify order ownership
-    if ($order->user_id !== Auth::id()) {
+    if ($order->user_id != Auth::id()) {
       Log::warning('Unauthorized payment access attempt', [
         'order_id' => $order->id,
         'auth_user' => Auth::id(),
@@ -52,7 +52,7 @@ class StripeController extends Controller
       }
 
       // Prevent duplicate processing
-      if ($payment->status === 'paid') {
+      if ($payment->status == 'paid') {
         Log::info('Payment already completed for order: ' . $order->id);
         return Inertia::render('Frontend/Order/PaymentSuccess', [
           'order' => $order->load(['orderItems.story', 'shippingAddress.deliveryOption'])
@@ -159,7 +159,7 @@ class StripeController extends Controller
     ]);
 
     // Verify order ownership
-    if ($order->user_id !== Auth::id()) {
+    if ($order->user_id != Auth::id()) {
       abort(403, 'Unauthorized access to order');
     }
 

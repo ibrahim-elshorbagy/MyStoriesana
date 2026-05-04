@@ -35,7 +35,7 @@ export default function Tabs({ tabs }) {
             <SwiperSlide key={index} className="!w-auto">
               <button
                 className={`inline-flex items-center px-4 py-2 text-sm font-medium rounded-t-lg ${
-                  activeTab === index
+                  activeTab == index
                     ? "text-orange-500 border-b-2 border-orange-500 active dark:text-orange-400 dark:border-orange-400"
                     : "border-transparent hover:text-neutral-600 hover:border-neutral-300 dark:hover:text-neutral-300"
                 }`}
@@ -53,7 +53,7 @@ export default function Tabs({ tabs }) {
 
       <div className="p-4">
         {tabs.map((tab, index) => (
-          <div key={index} className={activeTab === index ? 'block' : 'hidden'}>
+          <div key={index} className={activeTab == index ? 'block' : 'hidden'}>
             {tab.content}
           </div>
         ))}

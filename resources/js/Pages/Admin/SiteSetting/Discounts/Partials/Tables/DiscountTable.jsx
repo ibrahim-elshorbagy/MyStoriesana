@@ -138,7 +138,7 @@ export default function DiscountTable({ discounts, onEdit }) {
     if (isSelected) return ''; // Let SelectableTable handle selected state
 
     // Alternate between neutral backgrounds
-    return index % 2 === 0
+    return index % 2 == 0
       ? 'bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700'
       : 'bg-neutral-50 dark:bg-neutral-900 hover:bg-neutral-100 dark:hover:bg-neutral-800';
   };

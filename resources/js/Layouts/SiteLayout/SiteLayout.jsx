@@ -12,7 +12,7 @@ export default function SiteLayout({ children, title }) {
   const { auth } = usePage().props;
 
   return (
-    <div className="min-h-screen" dir={locale === 'ar' ? 'rtl' : 'ltr'}>
+    <div className="min-h-screen" dir={locale == 'ar' ? 'rtl' : 'ltr'}>
       {/* Header */}
       <Header />
 

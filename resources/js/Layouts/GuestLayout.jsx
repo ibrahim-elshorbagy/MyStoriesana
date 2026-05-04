@@ -9,7 +9,7 @@ export default function GuestLayout({ children, title = 'Authentication' }) {
   const { t } = useTrans();
 
   return (
-    <div className="min-h-screen relative overflow-hidden" dir={locale === 'ar' ? 'rtl' : 'ltr'}>
+    <div className="min-h-screen relative overflow-hidden" dir={locale == 'ar' ? 'rtl' : 'ltr'}>
       <Head title={title} />
 
       {/* Enhanced Background with Multiple Gradient Layers */}

@@ -57,7 +57,7 @@ class CustomerFeedbackController extends Controller
     }
 
     // At least one must be provided
-    if ($providedCount === 0) {
+    if ($providedCount == 0) {
       return back()->withErrors(['general' => __('website.at_least_one_required')]);
     }
 
@@ -111,7 +111,7 @@ class CustomerFeedbackController extends Controller
       return back()->withErrors(['general' => __('website.only_one_required')]);
     }
 
-    if ($providedCount === 0) {
+    if ($providedCount == 0) {
       return back()->withErrors(['general' => __('website.at_least_one_required')]);
     }
 

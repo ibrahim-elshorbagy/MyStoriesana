@@ -33,7 +33,7 @@ export default function CreateModal({ isOpen, onClose, roles }) {
   // Prepare roles for dropdown
   const roleOptions = roles.map(role => ({
     value: role.name,
-    label: role.name === 'admin' ? t('admin') : t('user_role'),
+    label: role.name == 'admin' ? t('admin') : t('user_role'),
   }));
 
   return (

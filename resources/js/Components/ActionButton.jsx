@@ -44,7 +44,7 @@ export default function ActionButton({
     } ${className}`;
 
   // Return either a button or a Link component based on the "as" prop
-  if (as === 'a') {
+  if (as == 'a') {
     return (
       <Link
         href={href}

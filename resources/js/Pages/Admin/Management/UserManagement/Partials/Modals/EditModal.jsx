@@ -56,7 +56,7 @@ export default function EditModal({ isOpen, onClose, user, roles }) {
     { value: '', label: `-- ${t('role')} --` },
     ...(roles?.map(role => ({
       value: role.name,
-      label: role.name === 'admin' ? t('admin') : t('user_role')
+      label: role.name == 'admin' ? t('admin') : t('user_role')
     })) || []),
   ];
 

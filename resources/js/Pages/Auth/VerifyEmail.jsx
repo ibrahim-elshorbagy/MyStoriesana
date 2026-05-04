@@ -39,7 +39,7 @@ export default function VerifyEmail({ status }) {
                     </div>
                 </div>
 
-                {status === 'verification-link-sent' && (
+                {status == 'verification-link-sent' && (
                     <div className="bg-gradient-to-r from-orange-50 to-neutral-50 rounded-xl p-6 border border-orange-200/30">
                         <div className="flex items-center p-4 rounded-lg bg-orange-50 text-sm text-orange-800 border border-orange-200">
                             <i className="fa-solid fa-check-circle mr-3 text-orange-600"></i>

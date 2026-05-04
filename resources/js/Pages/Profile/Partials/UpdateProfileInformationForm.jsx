@@ -95,7 +95,7 @@ export default function UpdateProfileInformation({
           </div>
         </div>
 
-        {mustVerifyEmail && user.email_verified_at === null && (
+        {mustVerifyEmail && user.email_verified_at == null && (
           <div className="mt-4 p-3 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-900/30 rounded-lg">
             <p className="text-sm text-yellow-800 dark:text-yellow-200 flex items-center gap-2">
               <i className="fa-solid fa-exclamation-circle"></i>
@@ -110,14 +110,14 @@ export default function UpdateProfileInformation({
               </Link>
             </p>
 
-            {status === 'verification-link-sent' && (
+            {status == 'verification-link-sent' && (
               <div className="mt-2 text-sm font-medium text-orange-600 dark:text-orange-400">
                 {t('verification_link_sent')}
               </div>
             )}
           </div>
         )}
-        {mustVerifyEmail && user.email_verified_at !== null && (
+        {mustVerifyEmail && user.email_verified_at != null && (
           <div className="mt-4 p-3 bg-orange-50 dark:bg-orange-900/20 border border-orange-200 dark:border-orange-900/30 rounded-lg">
             <p className="text-sm text-orange-800 dark:text-orange-200 flex items-center gap-2">
               <i className="fa-solid fa-circle-check"></i>

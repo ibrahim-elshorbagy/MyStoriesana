@@ -106,7 +106,7 @@ class OrderController extends Controller
   public function continuePayment(Order $order)
   {
     // Ensure user owns the order
-    if ($order->user_id !== Auth::id()) {
+    if ($order->user_id != Auth::id()) {
       abort(403);
     }
 
@@ -384,7 +384,7 @@ class OrderController extends Controller
   public function processExistingOrderPayment(Request $request, Order $order)
   {
     // Ensure user owns the order
-    if ($order->user_id !== Auth::id()) {
+    if ($order->user_id != Auth::id()) {
       abort(403, __('website_response.unauthorized_access'));
     }
 
@@ -437,7 +437,7 @@ class OrderController extends Controller
         $inputDiscountCode = trim($validated['discount_code'] ?? '');
 
         // ✅ If empty string sent = User explicitly removed discount
-        if ($inputDiscountCode === '') {
+        if ($inputDiscountCode == '') {
           $discountCode = null;
           $discountValue = 0;
           $discountId = null;

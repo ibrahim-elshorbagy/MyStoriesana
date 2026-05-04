@@ -64,13 +64,13 @@ export default function CreateOrder({ pricing, deliveryOptions, story = null }) 
   const validateStep1 = () => {
     const newErrors = {};
 
-    if (!data.child_name || data.child_name.trim() === '') {
+    if (!data.child_name || data.child_name.trim() == '') {
       newErrors.child_name = t('required') || 'The child name field is required.';
     } else if (data.child_name.length > 255) {
       newErrors.child_name = t('validation_max_string');
     }
 
-    if (!data.child_age || data.child_age === '') {
+    if (!data.child_age || data.child_age == '') {
       newErrors.child_age = t('required');
     }
 
@@ -98,18 +98,18 @@ export default function CreateOrder({ pricing, deliveryOptions, story = null }) 
     }
 
     setClientErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
+    return Object.keys(newErrors).length == 0;
   };
 
   const goToStep = (step) => {
-    if (step === 1 && currentStep === 0) {
+    if (step == 1 && currentStep == 0) {
       setClientErrors({});
       setCameFromStepZero(true);
       setCurrentStep(step);
       return;
     }
 
-    if (step === 3) {
+    if (step == 3) {
       if (!validateStep1()) {
         setCurrentStep(1);
         setTimeout(() => {
@@ -157,9 +157,9 @@ export default function CreateOrder({ pricing, deliveryOptions, story = null }) 
   };
 
   const getStepTitle = () => {
-    if (currentStep === 0) return t('customize_story') || 'تخصيص القصة';
-    if (currentStep === 1) return t('step_1') || 'الخطوة 1';
-    if (currentStep === 3) return t('step_3') || 'الخطوة 3';
+    if (currentStep == 0) return t('customize_story') || 'تخصيص القصة';
+    if (currentStep == 1) return t('step_1') || 'الخطوة 1';
+    if (currentStep == 3) return t('step_3') || 'الخطوة 3';
   };
 
   return (
@@ -183,16 +183,16 @@ export default function CreateOrder({ pricing, deliveryOptions, story = null }) 
             <div className="mt-6 flex justify-center">
               <div className="flex items-center space-x-4 rtl:space-x-reverse">
                 {story && (
-                  <div className={`${currentStep === 0 ? 'w-12 h-2 bg-gradient-to-r from-orange-400 to-pink-500' : currentStep > 0 ? 'w-2 h-2 bg-green-500' : 'w-2 h-2 bg-neutral-300'} rounded-full transition-all duration-300`}></div>
+                  <div className={`${currentStep == 0 ? 'w-12 h-2 bg-gradient-to-r from-orange-400 to-pink-500' : currentStep > 0 ? 'w-2 h-2 bg-green-500' : 'w-2 h-2 bg-neutral-300'} rounded-full transition-all duration-300`}></div>
                 )}
-                <div className={`${currentStep === 1 ? 'w-12 h-2 bg-gradient-to-r from-orange-400 to-pink-500' : currentStep > 1 ? 'w-2 h-2 bg-green-500' : 'w-2 h-2 bg-neutral-300'} rounded-full transition-all duration-300`}></div>
-                <div className={`${currentStep === 3 ? 'w-12 h-2 bg-gradient-to-r from-orange-400 to-pink-500' : 'w-2 h-2 bg-neutral-300'} rounded-full transition-all duration-300`}></div>
+                <div className={`${currentStep == 1 ? 'w-12 h-2 bg-gradient-to-r from-orange-400 to-pink-500' : currentStep > 1 ? 'w-2 h-2 bg-green-500' : 'w-2 h-2 bg-neutral-300'} rounded-full transition-all duration-300`}></div>
+                <div className={`${currentStep == 3 ? 'w-12 h-2 bg-gradient-to-r from-orange-400 to-pink-500' : 'w-2 h-2 bg-neutral-300'} rounded-full transition-all duration-300`}></div>
               </div>
             </div>
           </div>
 
           <form onSubmit={handleSubmit}>
-            {currentStep === 0 && story && (
+            {currentStep == 0 && story && (
               <StepZero
                 story={story}
                 data={data}
@@ -207,7 +207,7 @@ export default function CreateOrder({ pricing, deliveryOptions, story = null }) 
               />
             )}
 
-            {currentStep === 1 && (
+            {currentStep == 1 && (
               <StepOne
                 data={data}
                 setData={setData}
@@ -224,7 +224,7 @@ export default function CreateOrder({ pricing, deliveryOptions, story = null }) 
               />
             )}
 
-            {currentStep === 3 && (
+            {currentStep == 3 && (
               <StepThree
                 data={data}
                 imagePreview={imagePreview}

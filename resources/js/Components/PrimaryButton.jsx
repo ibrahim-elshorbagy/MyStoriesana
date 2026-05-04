@@ -11,7 +11,7 @@ export default function PrimaryButton({
   ...props
 }) {
   // Determine size-specific classes
-  const sizeClasses = size === 'large' ? 'md:text-base' : '';
+  const sizeClasses = size == 'large' ? 'md:text-base' : '';
 
   // Determine shadow classes
   const shadowClasses = withShadow ? 'shadow' : '';
@@ -20,7 +20,7 @@ export default function PrimaryButton({
   const iconElement = icon ? <i className={`fa-solid ${icon}`}></i> : null;
 
   // Calculate the gap size based on the icon and text
-  const gapSize = size === 'large' ? 'gap-2' : 'gap-1';
+  const gapSize = size == 'large' ? 'gap-2' : 'gap-1';
 
   // Check if className already contains a background color
   const hasBgClass = /\bbg-/.test(className);
@@ -36,7 +36,7 @@ export default function PrimaryButton({
   `.trim();
 
   // If it's a button element, include the type
-  const buttonSpecificProps = Component === 'button' ? { type } : {};
+  const buttonSpecificProps = Component == 'button' ? { type } : {};
 
   return (
       <Component

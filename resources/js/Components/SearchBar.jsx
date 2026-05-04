@@ -20,7 +20,7 @@ export default forwardRef(function SearchBar(
   const isDashboard = url.startsWith("/dashboard");
 
   const handleKeyPress = (e) => {
-    if (e.key !== "Enter") return;
+    if (e.key != "Enter") return;
 
     let queryString = {
       ...Object.fromEntries(new URLSearchParams(window.location.search)),

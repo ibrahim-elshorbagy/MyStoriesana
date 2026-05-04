@@ -16,7 +16,7 @@ export function useSmoothScroll() {
       });
 
       // Update URL hash without triggering navigation
-      if (window.location.hash !== `#${sectionId}`) {
+      if (window.location.hash != `#${sectionId}`) {
         window.history.replaceState(null, "", `#${sectionId}`);
       }
     }
@@ -45,7 +45,7 @@ export function useSmoothScroll() {
         currentSection = "home";
       }
 
-      if (currentSection !== activeSection) {
+      if (currentSection != activeSection) {
         setActiveSection(currentSection);
       }
     };

@@ -13,7 +13,7 @@ class UserController extends Controller
     $page = StaticPage::findOrFail($id);
 
     // Check if page is published
-    if ($page->status !== 'published') {
+    if ($page->status != 'published') {
       abort(404);
     }
 

@@ -43,7 +43,7 @@ export default function WebNavigation() {
               <NavLink
                 href="#home"
                 onClick={(e) => handleNavClick(e, 'home')}
-                active={isHomePage && activeSection === 'home'}
+                active={isHomePage && activeSection == 'home'}
               >
                 {t('home')}
               </NavLink>
@@ -52,7 +52,7 @@ export default function WebNavigation() {
               <NavLink
                 href="#features"
                 onClick={(e) => handleNavClick(e, 'features')}
-                active={isHomePage && activeSection === 'features'}
+                active={isHomePage && activeSection == 'features'}
               >
                 {t('features')}
               </NavLink>
@@ -61,7 +61,7 @@ export default function WebNavigation() {
               <NavLink
                 href="#stories"
                 onClick={(e) => handleNavClick(e, 'stories')}
-                active={isHomePage && activeSection === 'stories'}
+                active={isHomePage && activeSection == 'stories'}
               >
                 {t('stories_title')}
               </NavLink>
@@ -70,7 +70,7 @@ export default function WebNavigation() {
               <NavLink
                 href="#pricing"
                 onClick={(e) => handleNavClick(e, 'pricing')}
-                active={isHomePage && activeSection === 'pricing'}
+                active={isHomePage && activeSection == 'pricing'}
               >
                 {t('pricing')}
               </NavLink>
@@ -79,7 +79,7 @@ export default function WebNavigation() {
               <NavLink
                 href="#faqs"
                 onClick={(e) => handleNavClick(e, 'faqs')}
-                active={isHomePage && activeSection === 'faqs'}
+                active={isHomePage && activeSection == 'faqs'}
               >
                 {t('faqs')}
               </NavLink>
@@ -88,7 +88,7 @@ export default function WebNavigation() {
               <NavLink
                 href="#contact"
                 onClick={(e) => handleNavClick(e, 'contact')}
-                active={isHomePage && activeSection === 'contact'}
+                active={isHomePage && activeSection == 'contact'}
               >
                 {t('contact_us')}
               </NavLink>

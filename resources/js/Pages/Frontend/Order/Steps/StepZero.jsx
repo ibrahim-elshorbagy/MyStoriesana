@@ -17,7 +17,7 @@ export default function StepZero({
 
   const getCoverImage = () => {
     if (!story) return null;
-    return data.language === 'arabic' ? story.cover_image_ar : story.cover_image_en;
+    return data.language == 'arabic' ? story.cover_image_ar : story.cover_image_en;
   };
 
   const coverImagePath = getCoverImage();

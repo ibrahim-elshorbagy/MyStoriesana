@@ -157,16 +157,16 @@ export default function EditStory({ story, categories = [] }) {
 
   // Delete existing gallery image
   const deleteExistingGalleryImage = (imagePath, locale) => {
-    if (locale === 'ar') {
-      const updatedGallery = existingGalleryAr.filter(img => img !== imagePath);
+    if (locale == 'ar') {
+      const updatedGallery = existingGalleryAr.filter(img => img != imagePath);
       setExistingGalleryAr(updatedGallery);
       setData('existing_gallery_images_ar', updatedGallery);
-    } else if (locale === 'en') {
-      const updatedGallery = existingGalleryEn.filter(img => img !== imagePath);
+    } else if (locale == 'en') {
+      const updatedGallery = existingGalleryEn.filter(img => img != imagePath);
       setExistingGalleryEn(updatedGallery);
       setData('existing_gallery_images_en', updatedGallery);
-    } else if (locale === 'de') {
-      const updatedGallery = existingGalleryDe.filter(img => img !== imagePath);
+    } else if (locale == 'de') {
+      const updatedGallery = existingGalleryDe.filter(img => img != imagePath);
       setExistingGalleryDe(updatedGallery);
       setData('existing_gallery_images_de', updatedGallery);
     }
@@ -174,16 +174,16 @@ export default function EditStory({ story, categories = [] }) {
 
   // Delete existing gallery video
   const deleteExistingGalleryVideo = (videoPath, locale) => {
-    if (locale === 'ar') {
-      const updatedVideos = existingVideosAr.filter(vid => vid !== videoPath);
+    if (locale == 'ar') {
+      const updatedVideos = existingVideosAr.filter(vid => vid != videoPath);
       setExistingVideosAr(updatedVideos);
       setData('existing_gallery_videos_ar', updatedVideos);
-    } else if (locale === 'en') {
-      const updatedVideos = existingVideosEn.filter(vid => vid !== videoPath);
+    } else if (locale == 'en') {
+      const updatedVideos = existingVideosEn.filter(vid => vid != videoPath);
       setExistingVideosEn(updatedVideos);
       setData('existing_gallery_videos_en', updatedVideos);
-    } else if (locale === 'de') {
-      const updatedVideos = existingVideosDe.filter(vid => vid !== videoPath);
+    } else if (locale == 'de') {
+      const updatedVideos = existingVideosDe.filter(vid => vid != videoPath);
       setExistingVideosDe(updatedVideos);
       setData('existing_gallery_videos_de', updatedVideos);
     }

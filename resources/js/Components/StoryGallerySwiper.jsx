@@ -17,7 +17,7 @@ export default function StoryGallerySwiper({ images, videos, title }) {
     ...(videos || []).map(src => ({ type: 'video', src }))
   ];
 
-  if (!mediaItems || mediaItems.length === 0) return null;
+  if (!mediaItems || mediaItems.length == 0) return null;
 
   const handleCloseModal = () => {
     setShowZoomModal(false);
@@ -115,7 +115,7 @@ export default function StoryGallerySwiper({ images, videos, title }) {
           onClick={(e) => e.stopPropagation()}
           onTouchEnd={(e) => e.stopPropagation()}
         >
-          {currentMedia.type === 'image' ? (
+          {currentMedia.type == 'image' ? (
             <img
               src={currentMedia.src}
               alt={`${title} - ${currentMediaIndex + 1}`}
@@ -189,13 +189,13 @@ export default function StoryGallerySwiper({ images, videos, title }) {
                 <SwiperSlide key={index} style={{ height: 'auto' }}>
                   <div
                     className={`rounded-md sm:rounded-lg cursor-pointer overflow-hidden border transition-all duration-300 shadow-md hover:shadow-xl ${
-                      index === currentMediaIndex
+                      index == currentMediaIndex
                         ? 'border-2 sm:border-3 border-orange-500 ring-1 sm:ring-2 ring-orange-200 scale-105'
                         : 'border border-white hover:border-orange-300'
                     }`}
                     onClick={() => setCurrentMediaIndex(index)}
                   >
-                    {media.type === 'image' ? (
+                    {media.type == 'image' ? (
                       <img
                         src={media.src}
                         alt={`Thumbnail ${index + 1}`}
@@ -239,7 +239,7 @@ export default function StoryGallerySwiper({ images, videos, title }) {
         <div className="relative flex-1 min-w-0">
           <div className="rounded-lg sm:rounded-xl overflow-hidden shadow-2xl bg-gradient-to-br from-orange-100 to-green-100 p-1 sm:p-2 h-full flex items-center justify-center">
             <div className="aspect-[193/260] w-full h-full">
-              {mediaItems[currentMediaIndex].type === 'image' ? (
+              {mediaItems[currentMediaIndex].type == 'image' ? (
                 <img
                   src={mediaItems[currentMediaIndex].src}
                   alt={`${title} - ${currentMediaIndex + 1}`}

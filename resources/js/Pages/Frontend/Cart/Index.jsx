@@ -142,7 +142,7 @@ export default function Index({ cart }) {
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 py-12">
-        {(!cart || !cart.cart_items || cart.cart_items.length === 0) ? (
+        {(!cart || !cart.cart_items || cart.cart_items.length == 0) ? (
           /* Empty Cart State */
           <div className="text-center py-20">
             <div className="text-8xl text-orange-300 mb-8">

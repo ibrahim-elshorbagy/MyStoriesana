@@ -28,7 +28,7 @@ export default function OrderDetails({ order, t, statusOptions, paymentMethodOpt
           <span className="text-neutral-700 dark:text-neutral-300">{t('total_price')}:</span>
           <span className="text-neutral-900 dark:text-neutral-100">{order.total_price} {t('currency')}</span>
         </div>
-        {order.payments?.some(p => p.status === 'paid') && order.discount_code && (
+        {order.payments?.some(p => p.status == 'paid') && order.discount_code && (
           <>
             <div className="flex justify-between">
               <span className="font-medium text-neutral-700 dark:text-neutral-300">{t('discount_code')}:</span>

@@ -140,13 +140,13 @@ export default function UsersTable({ users, onEdit, pageParam }) {
         {user.roles.map(role => (
           <span
             key={role.id}
-            className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium mr-1 ${role.name === 'admin'
+            className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium mr-1 ${role.name == 'admin'
                 ? 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200'
                 : 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200'
               }`}
           >
             <i className="fa-solid fa-shield mr-1"></i>
-            {role.name === 'admin' ? t('admin') : t('user_role')}
+            {role.name == 'admin' ? t('admin') : t('user_role')}
           </span>
         ))}
       </td>
@@ -221,7 +221,7 @@ export default function UsersTable({ users, onEdit, pageParam }) {
       return 'bg-red-50 dark:bg-red-950 hover:bg-red-100 dark:hover:bg-red-900';
     } else {
       // Active users alternate between neutral backgrounds
-      return index % 2 === 0
+      return index % 2 == 0
         ? 'bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700'
         : 'bg-neutral-50 dark:bg-neutral-900 hover:bg-neutral-100 dark:hover:bg-neutral-800';
     }

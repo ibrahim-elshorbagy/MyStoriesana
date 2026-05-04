@@ -50,7 +50,7 @@ export default function StepOne({
     }
 
     // Learning values required if not cameFromStepZero
-    if (!cameFromStepZero && (!data.value || data.value.length === 0)) {
+    if (!cameFromStepZero && (!data.value || data.value.length == 0)) {
       newErrors.value = t('learning_value_required');
     }
 
@@ -91,7 +91,7 @@ export default function StepOne({
   const handleLearningValueChange = (valueKey) => {
     const currentValues = data.value || [];
     if (currentValues.includes(valueKey)) {
-      setData('value', currentValues.filter(v => v !== valueKey));
+      setData('value', currentValues.filter(v => v != valueKey));
     } else {
       setData('value', [...currentValues, valueKey]);
     }

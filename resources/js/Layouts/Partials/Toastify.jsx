@@ -7,7 +7,7 @@ export default function Toastify() {
   const { flash } = usePage().props;
   const { locale } = usePage().props;
 
-  const place = locale === 'ar' ? 'bottom-left' : 'bottom-right';
+  const place = locale == 'ar' ? 'bottom-left' : 'bottom-right';
   useEffect(() => {
     if (flash && flash.status) {
       switch (flash.status) {

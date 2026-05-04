@@ -46,7 +46,7 @@ export default function SelectableTable({
     setSelectedItems(prev => {
       const itemId = item[idField];
       if (prev.includes(itemId)) {
-        return prev.filter(id => id !== itemId);
+        return prev.filter(id => id != itemId);
       } else {
         return [...prev, itemId];
       }
@@ -55,7 +55,7 @@ export default function SelectableTable({
 
   // Handle select all
   const handleSelectAll = () => {
-    if (selectAll || selectedItems.length === data.length) {
+    if (selectAll || selectedItems.length == data.length) {
       setSelectedItems([]);
       setSelectAll(false);
     } else {
@@ -144,7 +144,7 @@ export default function SelectableTable({
                     <input
                       type="checkbox"
                       className="w-4 h-4 text-orange-600 bg-neutral-100 border-neutral-300 rounded focus:ring-orange-500 dark:focus:ring-orange-600 dark:ring-offset-neutral-800 dark:focus:ring-offset-neutral-800 focus:ring-2 dark:bg-neutral-700 dark:border-neutral-600"
-                      checked={data.length > 0 && selectedItems.length === data.length}
+                      checked={data.length > 0 && selectedItems.length == data.length}
                       onChange={handleSelectAll}
                     />
                   </div>
@@ -158,16 +158,16 @@ export default function SelectableTable({
                   <div className="flex items-center gap-1">
                     {column.icon && <i className={`fa-solid ${column.icon}`}></i>}
                     <span>{column.label}</span>
-                    {sortOptions.find(opt => opt.field === column.field) && (
+                    {sortOptions.find(opt => opt.field == column.field) && (
                       <button
                         className="ml-1"
                         onClick={() => handleSort(
                           column.field,
-                          sortField === column.field && sortDirection === 'asc' ? 'desc' : 'asc'
+                          sortField == column.field && sortDirection == 'asc' ? 'desc' : 'asc'
                         )}
                       >
-                        {sortField === column.field ? (
-                          <i className={`fa-solid fa-sort-${sortDirection === 'asc' ? 'up' : 'down'} text-orange-500`}></i>
+                        {sortField == column.field ? (
+                          <i className={`fa-solid fa-sort-${sortDirection == 'asc' ? 'up' : 'down'} text-orange-500`}></i>
                         ) : (
                           <i className="fa-solid fa-sort text-neutral-400"></i>
                         )}
@@ -183,7 +183,7 @@ export default function SelectableTable({
               data.map((item, index) => {
                 const isSelected = selectedItems.includes(item[idField]);
                 const customRowClass = getRowClassName ? getRowClassName(item, index, isSelected) : '';
-                const defaultRowClass = index % 2 === 0 ? 'bg-neutral-100 dark:bg-neutral-800' : 'bg-neutral-50 dark:bg-neutral-900';
+                const defaultRowClass = index % 2 == 0 ? 'bg-neutral-100 dark:bg-neutral-800' : 'bg-neutral-50 dark:bg-neutral-900';
 
                 return (
                   <tr

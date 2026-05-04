@@ -101,7 +101,7 @@ export default function SingleStory({ story }) {
                       {story.category.name_value}
                     </span>
                   )}
-                  {story.gender !== null && (
+                  {story.gender != null && (
                     <span className="flex items-center gap-1.5 md:gap-2 bg-white/90 text-green-600 backdrop-blur-sm px-3 md:px-4 py-1.5 md:py-2 rounded-full font-bold shadow-lg">
                       <i className="fa-solid fa-venus-mars"></i>
                       {story.gender_text}

@@ -12,7 +12,7 @@ export default function CustomerFeedbackSection({ textFeedbacks, imageFeedbacks,
   const [playingStates, setPlayingStates] = useState({});
 
   // Detect RTL from document
-  const isRtl = document.documentElement.dir === 'rtl';
+  const isRtl = document.documentElement.dir == 'rtl';
 
   const toggleVideoPlayPause = (index, e) => {
     if (e) e.stopPropagation();
@@ -128,7 +128,7 @@ export default function CustomerFeedbackSection({ textFeedbacks, imageFeedbacks,
             className="!w-full !h-auto md:!h-screen"
             onSlideChange={(swiper) => {
               const currentIndex = swiper.realIndex;
-              if (playingStates[currentIndex] === undefined) {
+              if (playingStates[currentIndex] == undefined) {
                 setPlayingStates(prev => ({ ...prev, [currentIndex]: true }));
               }
             }}

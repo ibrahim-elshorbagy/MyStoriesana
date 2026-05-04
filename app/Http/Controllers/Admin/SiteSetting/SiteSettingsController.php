@@ -75,7 +75,7 @@ class SiteSettingsController extends Controller
 
     foreach ($request->settings as $key => $value) {
       // Handle file uploads for logo and favicon
-      if ($key === 'site_logo' || $key === 'site_favicon') {
+      if ($key == 'site_logo' || $key == 'site_favicon') {
         if ($request->hasFile("files.{$key}")) {
           $file = $request->file("files.{$key}");
 
@@ -95,7 +95,7 @@ class SiteSettingsController extends Controller
       }
 
       // Handle file uploads for how_it_works_video
-      if ($key === 'how_it_works_video') {
+      if ($key == 'how_it_works_video') {
         if ($request->hasFile("files.{$key}")) {
           $file = $request->file("files.{$key}");
 
@@ -151,7 +151,7 @@ class SiteSettingsController extends Controller
       $escapedValue = '"' . str_replace('"', '\"', trim($value)) . '"';
       $content = file_get_contents($path);
 
-      if (strpos($content, $key) !== false) {
+      if (strpos($content, $key) != false) {
         // Update existing key
         $content = preg_replace(
           '/^' . preg_quote($key, '/') . '=.*$/m',

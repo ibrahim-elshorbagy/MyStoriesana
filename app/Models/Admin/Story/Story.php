@@ -48,9 +48,9 @@ class Story extends Model
   public function getCoverImageValueAttribute(): ?string
   {
     $locale = app()->getLocale();
-    if ($locale === 'ar') {
+    if ($locale == 'ar') {
       $image = $this->cover_image_ar;
-    } elseif ($locale === 'de') {
+    } elseif ($locale == 'de') {
       $image = $this->cover_image_de ?? $this->cover_image_en;
     } else {
       $image = $this->cover_image_en;
@@ -72,9 +72,9 @@ class Story extends Model
   public function getPdfValueAttribute(): ?string
   {
     $locale = app()->getLocale();
-    if ($locale === 'ar') {
+    if ($locale == 'ar') {
       $pdf = $this->pdf_ar;
-    } elseif ($locale === 'de') {
+    } elseif ($locale == 'de') {
       $pdf = $this->pdf_de ?? $this->pdf_en;
     } else {
       $pdf = $this->pdf_en;
@@ -96,9 +96,9 @@ class Story extends Model
   public function getGalleryImagesValueAttribute(): array
   {
     $locale = app()->getLocale();
-    if ($locale === 'ar') {
+    if ($locale == 'ar') {
       $images = $this->gallery_images_ar ?? [];
-    } elseif ($locale === 'de') {
+    } elseif ($locale == 'de') {
       $images = $this->gallery_images_de ?? $this->gallery_images_en ?? [];
     } else {
       $images = $this->gallery_images_en ?? [];
@@ -113,9 +113,9 @@ class Story extends Model
   public function getGalleryVideosValueAttribute(): array
   {
     $locale = app()->getLocale();
-    if ($locale === 'ar') {
+    if ($locale == 'ar') {
       $videos = $this->gallery_videos_ar ?? [];
-    } elseif ($locale === 'de') {
+    } elseif ($locale == 'de') {
       $videos = $this->gallery_videos_de ?? $this->gallery_videos_en ?? [];
     } else {
       $videos = $this->gallery_videos_en ?? [];
@@ -134,7 +134,7 @@ class Story extends Model
 
   public function getGenderTextAttribute(): string
   {
-    if ($this->gender === null) {
+    if ($this->gender == null) {
       return '';
     }
     return $this->gender == 0 ? __('website.boy') : __('website.girl');

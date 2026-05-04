@@ -1,6 +1,6 @@
 @php
   $locale = $locale ?? app()->getLocale();
-  $isRtl = $locale === 'ar';
+  $isRtl = $locale == 'ar';
 @endphp
 
 <div style="font-family: Arial, sans-serif; background-color:#f9f9f9; padding:10px; text-align:center;">

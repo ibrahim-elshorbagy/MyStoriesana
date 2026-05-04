@@ -151,7 +151,7 @@ class StripeService
 
       return [
         'status' => true,
-        'is_paid' => $session->payment_status === 'paid',
+        'is_paid' => $session->payment_status == 'paid',
         'payment_intent' => $session->payment_intent,
         'amount_total' => $session->amount_total,
         'currency' => $session->currency,

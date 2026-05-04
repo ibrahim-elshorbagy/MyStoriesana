@@ -1,6 +1,6 @@
 @php
   $locale = $locale ?? app()->getLocale();
-  $isRtl = $locale === 'ar';
+  $isRtl = $locale == 'ar';
   $firstItem = $order->orderItems->first();
 @endphp
 

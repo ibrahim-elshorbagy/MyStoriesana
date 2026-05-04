@@ -12,7 +12,7 @@ export default function HowItWorksVideoSection({ videoUrl }) {
 
 
   // Detect RTL from document
-  const isRtl = document.documentElement.dir === 'rtl';
+  const isRtl = document.documentElement.dir == 'rtl';
 
   // Intersection Observer for lazy loading
   useEffect(() => {

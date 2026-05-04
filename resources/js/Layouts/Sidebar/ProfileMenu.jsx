@@ -19,7 +19,7 @@ export default function ProfileMenu({ position = 'sidebar' }) {
   // Handle escape key press and click outside
   useEffect(() => {
     const handleKeyDown = (e) => {
-      if (e.key === 'Escape') setMenuIsOpen(false);
+      if (e.key == 'Escape') setMenuIsOpen(false);
     };
 
     const handleClickOutside = (e) => {
@@ -46,12 +46,12 @@ export default function ProfileMenu({ position = 'sidebar' }) {
   }
 
   // Determine dropdown positioning based on context
-  const dropdownPositionClasses = position === 'navbar'
+  const dropdownPositionClasses = position == 'navbar'
     ? 'top-full mt-2 ltr:right-0 rtl:left-0' // Navbar: dropdown opens downward from top-right
     : 'md:bottom-0 ltr:md:right-[-195px] rtl:md:left-[-195px]'; // Sidebar: dropdown opens to the side
 
   // Determine arrow rotation based on context and menu state
-  const arrowRotationClasses = position === 'navbar'
+  const arrowRotationClasses = position == 'navbar'
     ? (menuIsOpen ? '-rotate-90' : 'rotate-90') // Navbar: arrow points down, rotates up when open
     : (menuIsOpen ? 'rotate-90' : 'ltr:rotate-90 rtl:rotate-90 ltr:md:rotate-0 rtl:md:rotate-180'); // Sidebar: arrow rotates down when open
 

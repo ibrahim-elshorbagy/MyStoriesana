@@ -54,10 +54,10 @@ export default function UpdateOrderStatus({ order, t }) {
       <div className="space-y-4">
         <div className="flex justify-between items-center">
           <span className="font-medium text-neutral-700 dark:text-neutral-300">{t('current_status')}:</span>
-          <span className={`inline-flex px-3 py-1 text-sm font-semibold rounded-full ${order.status === 'completed' ? 'bg-green-100 text-green-800 dark:bg-green-900/20 dark:text-green-400' :
-              order.status === 'processing' ? 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/20 dark:text-indigo-400' :
-                order.status === 'printing' ? 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900/20 dark:text-yellow-400' :
-                order.status === 'pending' ? 'bg-blue-100 text-blue-800 dark:bg-blue-900/20 dark:text-blue-400' :
+          <span className={`inline-flex px-3 py-1 text-sm font-semibold rounded-full ${order.status == 'completed' ? 'bg-green-100 text-green-800 dark:bg-green-900/20 dark:text-green-400' :
+              order.status == 'processing' ? 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/20 dark:text-indigo-400' :
+                order.status == 'printing' ? 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900/20 dark:text-yellow-400' :
+                order.status == 'pending' ? 'bg-blue-100 text-blue-800 dark:bg-blue-900/20 dark:text-blue-400' :
                   'bg-red-100 text-red-800 dark:bg-red-900/20 dark:text-red-400'
             }`}>
             {t(`order_status_${order.status}`)}

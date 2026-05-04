@@ -30,7 +30,7 @@ export default function Users({ auth, users, admins, roles, queryParams = null }
   };
 
 
-  // === Regular Users Tab ===
+  // == Regular Users Tab ==
   const usersContent = (
     <div>
       <div className="flex justify-between items-center mb-4">
@@ -63,7 +63,7 @@ export default function Users({ auth, users, admins, roles, queryParams = null }
     </div>
   );
 
-  // === Admins Tab ===
+  // == Admins Tab ==
   const adminsContent = (
     <div>
       <div className="flex justify-between items-center mb-4">

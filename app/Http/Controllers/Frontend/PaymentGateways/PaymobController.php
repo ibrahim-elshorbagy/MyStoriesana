@@ -51,7 +51,7 @@ class PaymobController extends Controller
 
         [$order, $payment] = $this->resolveOrderFromRequest($request);
 
-        if ($order->user_id !== Auth::id()) {
+        if ($order->user_id != Auth::id()) {
             Log::warning('Unauthorized Paymob processed callback', [
                 'order_id' => $order->id,
                 'auth_user' => Auth::id(),
@@ -64,7 +64,7 @@ class PaymobController extends Controller
 
         try {
             // Prevent duplicate processing
-            if ($payment->status === 'paid') {
+            if ($payment->status == 'paid') {
                 Log::info('Payment already completed for order: ' . $order->id);
                 return Inertia::render('Frontend/Order/PaymentSuccess', [
                     'order' => $order->load(['orderItems.story', 'shippingAddress.deliveryOption'])
@@ -139,7 +139,7 @@ class PaymobController extends Controller
 
         [$order, $payment] = $this->resolveOrderFromRequest($request);
 
-        if ($order->user_id !== Auth::id()) {
+        if ($order->user_id != Auth::id()) {
             Log::warning('Unauthorized Paymob response callback', [
                 'order_id'   => $order->id,
                 'auth_user'  => Auth::id(),
@@ -149,10 +149,10 @@ class PaymobController extends Controller
         }
 
         $locale = $request->query('lang') ?? 'en';
-        $isSuccess = $request->query('success') === 'true';
+        $isSuccess = $request->query('success') == 'true';
 
         // If already paid (processed callback already handled it)
-        if ($payment->status === 'paid') {
+        if ($payment->status == 'paid') {
             Log::info('Response callback: payment already processed for order: ' . $order->id);
             return Inertia::render('Frontend/Order/PaymentSuccess', [
                 'order' => $order->load(['orderItems.story', 'shippingAddress.deliveryOption'])

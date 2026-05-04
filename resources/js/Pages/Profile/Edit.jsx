@@ -65,30 +65,30 @@ export default function Edit({ mustVerifyEmail, status }) {
               <div className="p-2 space-y-2">
                 <button
                   onClick={() => handleMenuClick('profile-info')}
-                  className={`flex w-full items-center gap-2 p-2 rounded-lg text-neutral-700 dark:text-neutral-300 hover:bg-neutral-200 dark:hover:bg-neutral-800 transition-all ${activeSection === 'profile-info' ? 'bg-orange-500/10 text-black dark:text-white font-medium' : ''}`}
+                  className={`flex w-full items-center gap-2 p-2 rounded-lg text-neutral-700 dark:text-neutral-300 hover:bg-neutral-200 dark:hover:bg-neutral-800 transition-all ${activeSection == 'profile-info' ? 'bg-orange-500/10 text-black dark:text-white font-medium' : ''}`}
                 >
-                  <i className={`fa-solid fa-user-circle ${activeSection === 'profile-info' ? 'text-orange-500' : ''}`}></i>
+                  <i className={`fa-solid fa-user-circle ${activeSection == 'profile-info' ? 'text-orange-500' : ''}`}></i>
                   <span>{t('profile_information')}</span>
                 </button>
                 <button
                   onClick={() => handleMenuClick('security')}
-                  className={`flex w-full items-center gap-2 p-2 rounded-lg text-neutral-700 dark:text-neutral-300 hover:bg-neutral-200 dark:hover:bg-neutral-800 transition-all ${activeSection === 'security' ? 'bg-orange-500/10 text-black dark:text-white font-medium' : ''}`}
+                  className={`flex w-full items-center gap-2 p-2 rounded-lg text-neutral-700 dark:text-neutral-300 hover:bg-neutral-200 dark:hover:bg-neutral-800 transition-all ${activeSection == 'security' ? 'bg-orange-500/10 text-black dark:text-white font-medium' : ''}`}
                 >
-                  <i className={`fa-solid fa-shield-alt ${activeSection === 'security' ? 'text-orange-500' : ''}`}></i>
+                  <i className={`fa-solid fa-shield-alt ${activeSection == 'security' ? 'text-orange-500' : ''}`}></i>
                   <span>{t('security')}</span>
                 </button>
                 <button
                   onClick={() => handleMenuClick('account')}
-                  className={`flex w-full items-center gap-2 p-2 rounded-lg text-neutral-700 dark:text-neutral-300 hover:bg-neutral-200 dark:hover:bg-neutral-800 transition-all ${activeSection === 'account' ? 'bg-orange-500/10 text-black dark:text-white font-medium' : ''}`}
+                  className={`flex w-full items-center gap-2 p-2 rounded-lg text-neutral-700 dark:text-neutral-300 hover:bg-neutral-200 dark:hover:bg-neutral-800 transition-all ${activeSection == 'account' ? 'bg-orange-500/10 text-black dark:text-white font-medium' : ''}`}
                 >
                   <i className="fa-solid fa-user-minus text-red-500"></i>
                   <span>{t('account_management')}</span>
                 </button>
                 <button
                   onClick={() => handleMenuClick('appearance')}
-                  className={`flex w-full items-center gap-2 p-2 rounded-lg text-neutral-700 dark:text-neutral-300 hover:bg-neutral-200 dark:hover:bg-neutral-800 transition-all ${activeSection === 'appearance' ? 'bg-orange-500/10 text-black dark:text-white font-medium' : ''}`}
+                  className={`flex w-full items-center gap-2 p-2 rounded-lg text-neutral-700 dark:text-neutral-300 hover:bg-neutral-200 dark:hover:bg-neutral-800 transition-all ${activeSection == 'appearance' ? 'bg-orange-500/10 text-black dark:text-white font-medium' : ''}`}
                 >
-                  <i className={`fa-solid fa-palette ${activeSection === 'appearance' ? 'text-orange-500' : ''}`}></i>
+                  <i className={`fa-solid fa-palette ${activeSection == 'appearance' ? 'text-orange-500' : ''}`}></i>
                   <span>{t('appearance')}</span>
                 </button>
               </div>
@@ -98,7 +98,7 @@ export default function Edit({ mustVerifyEmail, status }) {
           {/* Main content area */}
           <div className="lg:col-span-2 min-h-[60vh]">
             {/* Content based on active section */}
-            {activeSection === 'profile-info' && (
+            {activeSection == 'profile-info' && (
               <div className="bg-neutral-100 dark:bg-neutral-900 rounded-xl border border-neutral-200 dark:border-neutral-800 overflow-hidden animate-fadeIn">
                 <div className="p-4 border-b border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-950/30 flex items-center justify-between">
                   <h2 className="font-semibold text-neutral-900 dark:text-neutral-100 flex items-center gap-2">
@@ -120,7 +120,7 @@ export default function Edit({ mustVerifyEmail, status }) {
             )}
 
             {/* Security Section */}
-            {activeSection === 'security' && (
+            {activeSection == 'security' && (
               <div className="bg-neutral-100 dark:bg-neutral-900 rounded-xl border border-neutral-200 dark:border-neutral-800 overflow-hidden animate-fadeIn">
                 <div className="p-4 border-b border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-950/30 flex items-center justify-between">
                   <h2 className="font-semibold text-neutral-900 dark:text-neutral-100 flex items-center gap-2">
@@ -135,7 +135,7 @@ export default function Edit({ mustVerifyEmail, status }) {
             )}
 
             {/* Account Management Section */}
-            {activeSection === 'account' && (
+            {activeSection == 'account' && (
               <div className="bg-neutral-100 dark:bg-neutral-900 rounded-xl border border-red-200 dark:border-red-900/30 overflow-hidden animate-fadeIn">
                 <div className="p-4 border-b border-red-200 dark:border-red-900/30 bg-red-50 dark:bg-red-950/10 flex items-center justify-between">
                   <h2 className="font-semibold text-neutral-900 dark:text-neutral-100 flex items-center gap-2">
@@ -150,7 +150,7 @@ export default function Edit({ mustVerifyEmail, status }) {
             )}
 
             {/* Appearance Section */}
-            {activeSection === 'appearance' && (
+            {activeSection == 'appearance' && (
               <div className="bg-neutral-100 dark:bg-neutral-900 rounded-xl border border-neutral-200 dark:border-neutral-800 overflow-hidden animate-fadeIn">
                 <div className="p-4 border-b border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-950/30 flex items-center justify-between">
                   <h2 className="font-semibold text-neutral-900 dark:text-neutral-100 flex items-center gap-2">

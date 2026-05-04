@@ -19,7 +19,7 @@ export default function StoryCard({ story }) {
           />
 
           {/* Gender Badge */}
-          {story.gender !== null && (
+          {story.gender != null && (
             <div className="absolute top-3 right-3 bg-orange-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
               {story.gender_text}
             </div>

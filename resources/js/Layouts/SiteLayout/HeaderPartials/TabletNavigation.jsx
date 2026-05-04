@@ -116,7 +116,7 @@ export default function TabletNavigation() {
               <MenuNavLink
                 href="#home"
                 onClick={(e) => handleNavClick(e, 'home')}
-                active={isHomePage && activeSection === 'home'}
+                active={isHomePage && activeSection == 'home'}
                 icon="fa-house"
               >
                 {t('home')}
@@ -126,7 +126,7 @@ export default function TabletNavigation() {
               <MenuNavLink
                 href="#features"
                 onClick={(e) => handleNavClick(e, 'features')}
-                active={isHomePage && activeSection === 'features'}
+                active={isHomePage && activeSection == 'features'}
                 icon="fa-star"
               >
                 {t('features')}
@@ -136,7 +136,7 @@ export default function TabletNavigation() {
               <MenuNavLink
                 href="#stories"
                 onClick={(e) => handleNavClick(e, 'stories')}
-                active={isHomePage && activeSection === 'stories'}
+                active={isHomePage && activeSection == 'stories'}
                 icon="fa-book"
               >
                 {t('stories_title')}
@@ -146,7 +146,7 @@ export default function TabletNavigation() {
               <MenuNavLink
                 href="#pricing"
                 onClick={(e) => handleNavClick(e, 'pricing')}
-                active={isHomePage && activeSection === 'pricing'}
+                active={isHomePage && activeSection == 'pricing'}
                 icon="fa-star"
               >
                 {t('pricing')}
@@ -156,7 +156,7 @@ export default function TabletNavigation() {
               <MenuNavLink
                 href="#faqs"
                 onClick={(e) => handleNavClick(e, 'faqs')}
-                active={isHomePage && activeSection === 'faqs'}
+                active={isHomePage && activeSection == 'faqs'}
                 icon="fa-question-circle"
               >
                 {t('faqs')}
@@ -167,7 +167,7 @@ export default function TabletNavigation() {
               <MenuNavLink
                 href="#contact"
                 onClick={(e) => handleNavClick(e, 'contact')}
-                active={isHomePage && activeSection === 'contact'}
+                active={isHomePage && activeSection == 'contact'}
                 icon="fa-building"
               >
                 {t('contact_us')}

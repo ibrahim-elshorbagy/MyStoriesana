@@ -16,7 +16,7 @@ export default function SecondaryButton({
     } ${className}`;
 
     // If it's a button element, include the type
-    const buttonSpecificProps = Component === 'button' ? { type } : {};
+    const buttonSpecificProps = Component == 'button' ? { type } : {};
 
     return (
         <Component

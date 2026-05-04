@@ -77,7 +77,7 @@ export default function NavigationToggles({
   }, []);
 
   const handleLanguageChange = (newLocale) => {
-    if (newLocale !== locale) {
+    if (newLocale != locale) {
       const form = document.createElement('form');
       form.method = 'POST';
       form.action = route('locale.change');
@@ -127,12 +127,12 @@ export default function NavigationToggles({
                 key={code}
                 onClick={() => handleLanguageChange(code)}
                 className={`${dropdownItemClasses} ${
-                  locale === code ? dropdownItemActiveClasses : ''
+                  locale == code ? dropdownItemActiveClasses : ''
                 }`}
               >
                 <span>{flag}</span>
                 <span className={dropdownTextClasses}>{name}</span>
-                {locale === code && (
+                {locale == code && (
                   <i className={checkIconClasses}></i>
                 )}
               </button>

@@ -256,7 +256,7 @@ export default function Sidebar({ sidebarIsOpen, setSidebarIsOpen }) {
         )}
 
         {/* No Results */}
-        {searchQuery && filteredNavItems.length === 0 && (
+        {searchQuery && filteredNavItems.length == 0 && (
           <div className="absolute top-full left-0 right-0 mt-2 bg-white dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 rounded-lg shadow-lg z-50 px-3 py-4 text-center text-sm text-neutral-500 dark:text-neutral-400">
             {t('no_results_for', { query: searchQuery })}
           </div>

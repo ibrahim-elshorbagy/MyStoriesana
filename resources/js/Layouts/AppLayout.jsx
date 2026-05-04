@@ -20,7 +20,7 @@ export default function AppLayout({ children, title }) {
   const { cart_count } = usePage().props;
 
   return (
-    <div className="font-sans antialiased" dir={locale === 'ar' ? 'rtl' : 'ltr'}>
+    <div className="font-sans antialiased" dir={locale == 'ar' ? 'rtl' : 'ltr'}>
       <div className=" bg-gray-100 dark:bg-neutral-800 min-h-[100vh]" >
 
         {/* Mobile Navbar */}

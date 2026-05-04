@@ -29,7 +29,7 @@ export default function TableControls({
 
   const handleSort = (field) => {
     let direction = 'asc';
-    if (field === sortField && sortDirection === 'asc') {
+    if (field == sortField && sortDirection == 'asc') {
       direction = 'desc';
     }
 
@@ -73,7 +73,7 @@ export default function TableControls({
     setShowPerPage(false);
   };
   const handleBulkAction = (action) => {
-    if (selectedItems.length === 0) return;
+    if (selectedItems.length == 0) return;
 
     // Show confirmation if required
     if (action.requiresConfirmation) {
@@ -129,13 +129,13 @@ export default function TableControls({
                       {bulkActions.map((action, index) => (
                         <button
                           key={index}
-                          className={`flex items-center w-full px-4 py-2 gap-2 ltr:text-left rtl:text-right text-sm hover:bg-neutral-100 dark:hover:bg-neutral-700 ${action.variant === 'delete'
+                          className={`flex items-center w-full px-4 py-2 gap-2 ltr:text-left rtl:text-right text-sm hover:bg-neutral-100 dark:hover:bg-neutral-700 ${action.variant == 'delete'
                             ? 'text-red-600 dark:text-red-400'
-                            : action.variant === 'orange'
+                            : action.variant == 'orange'
                               ? 'text-orange-600 dark:text-orange-400'
-                              : action.variant === 'blue'
+                              : action.variant == 'blue'
                                 ? 'text-blue-600 dark:text-blue-400'
-                                : action.variant === 'yellow'
+                                : action.variant == 'yellow'
                                   ? 'text-yellow-600 dark:text-yellow-400'
                                   : 'text-neutral-700 dark:text-neutral-200'
                             }`}
@@ -157,7 +157,7 @@ export default function TableControls({
           </div>
         ) : (
           <div className="text-neutral-500 dark:text-neutral-400">
-            {totalItems} {totalItems !== 1 ? t('items') : t('item')}
+            {totalItems} {totalItems != 1 ? t('items') : t('item')}
           </div>
         )}
       </div>
@@ -173,7 +173,7 @@ export default function TableControls({
               onClick={(e) => { e.stopPropagation(); setShowSortMenu(!showSortMenu); }}
             >
               {t('sort')}
-              {sortField && <span className="hidden sm:inline ml-1">{t('by')} {t(sortField)} {sortDirection === 'asc' ? `↑ ${t('ascending')}` : `↓ ${t('descending')}`}</span>}
+              {sortField && <span className="hidden sm:inline ml-1">{t('by')} {t(sortField)} {sortDirection == 'asc' ? `↑ ${t('ascending')}` : `↓ ${t('descending')}`}</span>}
             </ActionButton>
 
             {showSortMenu && (
@@ -182,12 +182,12 @@ export default function TableControls({
                   {sortOptions.map((option) => (
                     <button
                       key={option.field}
-                      className={`flex items-center w-full px-4 py-2 gap-2 text-left text-sm hover:bg-neutral-100 dark:hover:bg-neutral-700 ${sortField === option.field ? 'text-orange-600 dark:text-orange-400' : 'text-neutral-700 dark:text-neutral-200'}`}
+                      className={`flex items-center w-full px-4 py-2 gap-2 text-left text-sm hover:bg-neutral-100 dark:hover:bg-neutral-700 ${sortField == option.field ? 'text-orange-600 dark:text-orange-400' : 'text-neutral-700 dark:text-neutral-200'}`}
                       onClick={() => handleSort(option.field)}
                     >
                       {option.label}
-                      {sortField === option.field && (
-                        <i className={` fa-solid ${sortDirection === 'asc' ? 'fa-arrow-up' : 'fa-arrow-down'}`}></i>
+                      {sortField == option.field && (
+                        <i className={` fa-solid ${sortDirection == 'asc' ? 'fa-arrow-up' : 'fa-arrow-down'}`}></i>
                       )}
                     </button>
                   ))}
@@ -215,7 +215,7 @@ export default function TableControls({
                 {perPageOptions.map((option) => (
                   <button
                     key={option}
-                    className={`flex w-full px-4 py-2 text-left text-sm hover:bg-neutral-100 dark:hover:bg-neutral-700 ${perPage === option ? 'text-orange-600 dark:text-orange-400' : 'text-neutral-700 dark:text-neutral-200'}`}
+                    className={`flex w-full px-4 py-2 text-left text-sm hover:bg-neutral-100 dark:hover:bg-neutral-700 ${perPage == option ? 'text-orange-600 dark:text-orange-400' : 'text-neutral-700 dark:text-neutral-200'}`}
                     onClick={() => handlePerPageChange(option)}
                   >
                     {option}

@@ -46,7 +46,7 @@ return Application::configure(basePath: dirname(__DIR__))
 
       $status = $response->getStatusCode();
 
-      if (app()->environment(['local', 'testing']) && $status === 500) {
+      if (app()->environment(['local', 'testing']) && $status == 500) {
         return $response;
       }
 

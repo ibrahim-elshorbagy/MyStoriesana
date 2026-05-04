@@ -73,7 +73,7 @@ export default function DragFileInput({
   };
 
   const handleFiles = (files) => {
-    if (!multiple || files.length === 0) return;
+    if (!multiple || files.length == 0) return;
 
     const newFiles = [...selectedFiles];
 
@@ -98,7 +98,7 @@ export default function DragFileInput({
 
   const removeFile = (index) => {
     if (disabled || !multiple) return;
-    const newFiles = selectedFiles.filter((_, i) => i !== index);
+    const newFiles = selectedFiles.filter((_, i) => i != index);
     setSelectedFiles(newFiles);
     if (onChange) {
       onChange(newFiles);

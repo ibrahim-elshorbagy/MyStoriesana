@@ -44,10 +44,10 @@ class StoryController extends Controller
         // Sorting
         $sortField = 'updated_at';
         $sortDirection = 'desc';
-        if ($request->sort === 'name_asc') {
+        if ($request->sort == 'name_asc') {
             $sortField = 'title->en';
             $sortDirection = 'asc';
-        } elseif ($request->sort === 'name_desc') {
+        } elseif ($request->sort == 'name_desc') {
             $sortField = 'title->en';
             $sortDirection = 'desc';
         }
@@ -66,7 +66,7 @@ class StoryController extends Controller
 
     public function show(Story $story)
     {
-        if ($story->status !== 'published') {
+        if ($story->status != 'published') {
             abort(404);
         }
 

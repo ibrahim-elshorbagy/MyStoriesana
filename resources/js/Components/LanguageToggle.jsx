@@ -28,7 +28,7 @@ export default function LanguageToggle({ className = '' }) {
   }, []);
 
   const handleLanguageChange = (newLocale) => {
-    if (newLocale !== locale) {
+    if (newLocale != locale) {
       const form = document.createElement('form');
       form.method = 'POST';
       form.action = route('locale.change');
@@ -72,12 +72,12 @@ export default function LanguageToggle({ className = '' }) {
               key={code}
               onClick={() => handleLanguageChange(code)}
               className={`w-full text-left px-4 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-700 flex items-center gap-2 first:rounded-t-lg last:rounded-b-lg ${
-                locale === code ? 'bg-neutral-50 dark:bg-neutral-700' : ''
+                locale == code ? 'bg-neutral-50 dark:bg-neutral-700' : ''
               }`}
             >
               <span>{flag}</span>
               <span className="text-neutral-700 dark:text-neutral-300">{name}</span>
-              {locale === code && (
+              {locale == code && (
                 <i className="fa-solid fa-check ml-auto text-green-600 dark:text-green-400"></i>
               )}
             </button>

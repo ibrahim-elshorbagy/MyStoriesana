@@ -20,7 +20,7 @@ export default function OrderSummary({ order, t }) {
             <span className="font-semibold dark:text-white">{order.delivery_total} {t('currency')}</span>
           </div>
         )}
-        {order.payments?.some(p => p.status === 'paid') && order.discount_code && (
+        {order.payments?.some(p => p.status == 'paid') && order.discount_code && (
           <>
             <div className="flex justify-between">
               <span className="text-neutral-700 dark:text-neutral-300">{t('discount_code')}:</span>

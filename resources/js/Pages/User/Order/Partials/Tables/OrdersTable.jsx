@@ -66,18 +66,18 @@ export default function OrdersTable({ orders }) {
       <td className="px-3 py-4 whitespace-nowrap">
         <div className="flex flex-col gap-1">
           <span className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${
-            order.status === 'completed' ? 'bg-green-100 text-green-800 dark:bg-green-900/20 dark:text-green-400' :
-            order.status === 'processing' ? 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/20 dark:text-indigo-400' :
-            order.status === 'printing' ? 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900/20 dark:text-yellow-400' :
-            order.status === 'pending' ? 'bg-blue-100 text-blue-800 dark:bg-blue-900/20 dark:text-blue-400' :
+            order.status == 'completed' ? 'bg-green-100 text-green-800 dark:bg-green-900/20 dark:text-green-400' :
+            order.status == 'processing' ? 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/20 dark:text-indigo-400' :
+            order.status == 'printing' ? 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900/20 dark:text-yellow-400' :
+            order.status == 'pending' ? 'bg-blue-100 text-blue-800 dark:bg-blue-900/20 dark:text-blue-400' :
             'bg-red-100 text-red-800 dark:bg-red-900/20 dark:text-red-400'
           }`}>
             {t('order')}: {t(`order_status_${order.status}`)}
           </span>
           <span className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${
-            (order.payments?.[0]?.status || 'pending') === 'paid' ? 'bg-green-100 text-green-800 dark:bg-green-900/20 dark:text-green-400' :
-            (order.payments?.[0]?.status || 'pending') === 'pending' ? 'bg-blue-100 text-blue-800 dark:bg-blue-900/20 dark:text-blue-400' :
-            (order.payments?.[0]?.status || 'pending') === 'failed' ? 'bg-red-100 text-red-800 dark:bg-red-900/20 dark:text-red-400' :
+            (order.payments?.[0]?.status || 'pending') == 'paid' ? 'bg-green-100 text-green-800 dark:bg-green-900/20 dark:text-green-400' :
+            (order.payments?.[0]?.status || 'pending') == 'pending' ? 'bg-blue-100 text-blue-800 dark:bg-blue-900/20 dark:text-blue-400' :
+            (order.payments?.[0]?.status || 'pending') == 'failed' ? 'bg-red-100 text-red-800 dark:bg-red-900/20 dark:text-red-400' :
             'bg-gray-100 text-gray-800 dark:bg-gray-900/20 dark:text-gray-400'
           }`}>
             {t('payment')}: {t(`payment_status_${order.payments?.[0]?.status || 'pending'}`)}
@@ -100,7 +100,7 @@ export default function OrdersTable({ orders }) {
             <i className="fa fa-eye mr-1"></i>
             {t('view')}
           </ActionButton>
-          {!order.payments?.some(payment => payment.status === 'paid') && (
+          {!order.payments?.some(payment => payment.status == 'paid') && (
             <ActionButton
               href={route('frontend.order.continuePayment', order.id)}
               variant='success'
@@ -120,7 +120,7 @@ export default function OrdersTable({ orders }) {
     if (isSelected) return ''; // Let SelectableTable handle selected state
 
     // Alternate between neutral backgrounds
-    return index % 2 === 0
+    return index % 2 == 0
       ? 'bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700'
       : 'bg-neutral-50 dark:bg-neutral-900 hover:bg-neutral-100 dark:hover:bg-neutral-800';
   };
